@@ -16,7 +16,7 @@ const Index = () => {
       phase: "Foundation",
       highlights: ["Learn C++ or Python", "Basic DSA", "Git & GitHub", "OOPs Concepts"],
       path: "/first-year",
-      gradient: "bg-gradient-to-r from-purple-400 to-pink-400"
+      gradient: "bg-gradient-to-r from-blue-500 to-blue-700"
     },
     {
       year: "2nd Year",
@@ -25,7 +25,7 @@ const Index = () => {
       phase: "Development",
       highlights: ["Advanced DSA", "Web Development", "Database Management", "Projects"],
       path: "/second-year",
-      gradient: "bg-gradient-to-r from-blue-400 to-cyan-400"
+      gradient: "bg-gradient-to-r from-cyan-500 to-blue-600"
     },
     {
       year: "3rd Year",
@@ -34,7 +34,7 @@ const Index = () => {
       phase: "Specialization",
       highlights: ["Domain Selection", "Open Source", "Advanced Projects", "Internships"],
       path: "/third-year",
-      gradient: "bg-gradient-to-r from-green-400 to-emerald-400"
+      gradient: "bg-gradient-to-r from-blue-600 to-indigo-600"
     },
     {
       year: "4th Year",
@@ -43,7 +43,7 @@ const Index = () => {
       phase: "Career Ready",
       highlights: ["Placement Prep", "System Design", "Mock Interviews", "Higher Studies"],
       path: "/fourth-year",
-      gradient: "bg-gradient-to-r from-orange-400 to-red-400"
+      gradient: "bg-gradient-to-r from-indigo-600 to-purple-600"
     }
   ];
 
@@ -62,7 +62,7 @@ const Index = () => {
       skills: ["React", "Node.js", "Databases", "Cloud"],
       avgSalary: "₹12-35 LPA",
       jobRoles: ["Full Stack Developer", "Frontend Developer", "Backend Developer"],
-      color: "bg-green-500"
+      color: "bg-cyan-500"
     },
     {
       title: "Machine Learning & AI",
@@ -70,33 +70,33 @@ const Index = () => {
       skills: ["Python", "TensorFlow", "Statistics", "Data Analysis"],
       avgSalary: "₹18-50 LPA",
       jobRoles: ["ML Engineer", "Data Scientist", "AI Researcher"],
-      color: "bg-purple-500"
+      color: "bg-indigo-500"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-20">
-        <div className="absolute inset-0 bg-black opacity-20"></div>
+      <section className="relative hero-gradient text-white py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
             Your 4-Year B.Tech
-            <span className="block text-yellow-300">Tech Roadmap</span>
+            <span className="block text-blue-300">Tech Roadmap</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto">
             Navigate your engineering journey with confidence. From programming basics to placement success - we guide you every step of the way.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/first-year">
-              <Button size="lg" className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold px-8 py-4 text-lg">
+              <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-4 text-lg">
                 Start Your Journey
               </Button>
             </Link>
             <Link to="/domains">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 text-lg">
+              <Button size="lg" variant="outline" className="border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-gray-900 px-8 py-4 text-lg">
                 Explore Domains
               </Button>
             </Link>
@@ -105,11 +105,11 @@ const Index = () => {
       </section>
 
       {/* Year-wise Guide Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Year-wise Learning Path</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Year-wise Learning Path</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Follow our structured approach to make the most of your B.Tech years. Each year builds upon the previous one.
             </p>
           </div>
@@ -123,11 +123,11 @@ const Index = () => {
       </section>
 
       {/* Popular Domains Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 cool-blue-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Popular Tech Domains</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-4">Popular Tech Domains</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore different career paths in technology and find your passion.
             </p>
           </div>
@@ -140,7 +140,7 @@ const Index = () => {
           
           <div className="text-center">
             <Link to="/domains">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white">
                 View All Domains
               </Button>
             </Link>
@@ -149,11 +149,11 @@ const Index = () => {
       </section>
 
       {/* Success Stories Section */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Success Stories</h2>
-            <p className="text-xl text-gray-600">Real students, real achievements</p>
+            <h2 className="text-4xl font-bold text-foreground mb-4">Success Stories</h2>
+            <p className="text-xl text-muted-foreground">Real students, real achievements</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -180,19 +180,19 @@ const Index = () => {
                 package: "₹35 LPA"
               }
             ].map((story, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300">
+              <Card key={index} className="group hover:shadow-lg transition-all duration-300 bg-background border-border">
                 <CardContent className="p-6">
                   <div className="text-center mb-4">
                     <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white text-xl font-bold">
                       {story.name[0]}
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-900">{story.name}</h3>
+                    <h3 className="text-lg font-semibold text-foreground">{story.name}</h3>
                     <p className="text-primary font-medium">{story.achievement}</p>
-                    <p className="text-sm text-gray-600">{story.college}</p>
+                    <p className="text-sm text-muted-foreground">{story.college}</p>
                   </div>
-                  <p className="text-gray-600 text-center mb-4 italic">"{story.story}"</p>
+                  <p className="text-muted-foreground text-center mb-4 italic">"{story.story}"</p>
                   <div className="text-center">
-                    <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
                       {story.package}
                     </span>
                   </div>
@@ -204,7 +204,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-primary to-blue-600 text-white">
+      <section className="py-16 hero-gradient text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Start Your Tech Journey?</h2>
           <p className="text-xl mb-8">
@@ -212,12 +212,12 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/first-year">
-              <Button size="lg" className="bg-white text-primary hover:bg-gray-100 px-8 py-4 text-lg">
+              <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg">
                 Begin 1st Year Guide
               </Button>
             </Link>
             <Link to="/resources">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary px-8 py-4 text-lg">
+              <Button size="lg" variant="outline" className="border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-gray-900 px-8 py-4 text-lg">
                 Browse Resources
               </Button>
             </Link>
