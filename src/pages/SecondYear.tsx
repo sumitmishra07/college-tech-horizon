@@ -32,37 +32,37 @@ const SecondYear = () => {
     {
       category: "Data Structures & Algorithms",
       items: [
-        "Striver's A2Z DSA Course/Sheet",
-        "Abdul Bari Algorithm Course",
-        "LeetCode Medium Problems",
-        "Codeforces Div 2 Problems"
+        { name: "Striver's A2Z DSA Course/Sheet", url: "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/" },
+        { name: "Abdul Bari Algorithm Course", url: "https://www.youtube.com/watch?v=0IAPZzGSbME&list=PLDN4rrl48XKpZkf03iYFl-O29szjTrs_O" },
+        { name: "LeetCode Medium Problems", url: "https://leetcode.com/problemset/all/?difficulty=MEDIUM" },
+        { name: "Codeforces Div 2 Problems", url: "https://codeforces.com/problemset?order=BY_RATING_ASC&tags=div2" }
       ]
     },
     {
       category: "Web Development",
       items: [
-        "The Complete Web Developer Course by Colt Steele",
-        "JavaScript Mastery YouTube Channel",
-        "React - The Complete Guide by Maximilian",
-        "Node.js Course by Traversy Media"
+        { name: "The Complete Web Developer Course by Colt Steele", url: "https://www.udemy.com/course/the-web-developer-bootcamp/" },
+        { name: "JavaScript Mastery YouTube Channel", url: "https://www.youtube.com/@javascriptmastery" },
+        { name: "React - The Complete Guide by Maximilian", url: "https://www.udemy.com/course/react-the-complete-guide-incl-redux/" },
+        { name: "Node.js Course by Traversy Media", url: "https://www.youtube.com/watch?v=fBNz5xF-Kx4" }
       ]
     },
     {
       category: "Database Management",
       items: [
-        "SQL Tutorial by W3Schools",
-        "MongoDB University Courses",
-        "Database Design Course by Stanford",
-        "SQL by Anuj Bhaiya"
+        { name: "SQL Tutorial by W3Schools", url: "https://www.w3schools.com/sql/" },
+        { name: "MongoDB University Courses", url: "https://university.mongodb.com/" },
+        { name: "Database Design Course by Stanford", url: "https://www.edx.org/course/databases-5-sql" },
+        { name: "SQL by Anuj Bhaiya", url: "https://www.youtube.com/watch?v=hlGoQC332VM&list=PLKnIA16_Rmvb4hKG2Zo_Py-uOPhkDyJeP" }
       ]
     },
     {
       category: "Competitive Programming",
       items: [
-        "Codeforces Problemset",
-        "AtCoder Beginner Contests",
-        "CodeChef Long Challenges",
-        "USACO Training Program"
+        { name: "Codeforces Problemset", url: "https://codeforces.com/problemset" },
+        { name: "AtCoder Beginner Contests", url: "https://atcoder.jp/contests/archive?ratedType=0&category=0&keyword=" },
+        { name: "CodeChef Long Challenges", url: "https://www.codechef.com/practice" },
+        { name: "USACO Training Program", url: "http://www.usaco.org/index.php?page=traininggateway" }
       ]
     }
   ];
@@ -77,15 +77,15 @@ const SecondYear = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-16">
+      <section className="hero-gradient text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-4">2nd Year - Core + Development</h1>
-            <p className="text-xl mb-6 max-w-3xl mx-auto">
+            <p className="text-xl mb-6 max-w-3xl mx-auto text-gray-100">
               Master advanced algorithms, start building real projects, and dive deep into web development. This is where things get exciting!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -99,20 +99,20 @@ const SecondYear = () => {
       </section>
 
       {/* Key Focus Areas */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Key Focus Areas</h2>
+          <h2 className="text-4xl font-bold text-center text-foreground mb-12">Key Focus Areas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {focusAreas.map((area, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-background border-border">
                 <CardHeader>
                   <CardTitle className="text-xl text-primary">{area.title}</CardTitle>
-                  <p className="text-gray-600">{area.description}</p>
+                  <p className="text-muted-foreground">{area.description}</p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     {area.topics.map((topic, i) => (
-                      <li key={i} className="flex items-center text-gray-700">
+                      <li key={i} className="flex items-center text-foreground">
                         <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
                         {topic}
                       </li>
@@ -126,9 +126,9 @@ const SecondYear = () => {
       </section>
 
       {/* Learning Roadmap */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 cool-blue-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Learning Roadmap</h2>
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Learning Roadmap</h2>
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
               {[
@@ -163,23 +163,23 @@ const SecondYear = () => {
                   tasks: ["Mock interviews", "System design basics", "Resume building"]
                 }
               ].map((phase, index) => (
-                <Card key={index} className="border-l-4 border-l-blue-500">
+                <Card key={index} className="border-l-4 border-l-primary bg-background border-border">
                   <CardContent className="p-6">
                     <div className="flex items-start">
-                      <div className="bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold mr-4">
+                      <div className="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center font-bold mr-4">
                         {index + 1}
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center mb-2">
-                          <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mr-4">
+                          <span className="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium mr-4">
                             {phase.month}
                           </span>
-                          <h3 className="text-lg font-semibold text-gray-900">{phase.title}</h3>
+                          <h3 className="text-lg font-semibold text-foreground">{phase.title}</h3>
                         </div>
                         <ul className="space-y-1 mt-3">
                           {phase.tasks.map((task, i) => (
-                            <li key={i} className="flex items-center text-gray-600">
-                              <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                            <li key={i} className="flex items-center text-muted-foreground">
+                              <span className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></span>
                               {task}
                             </li>
                           ))}
@@ -195,21 +195,28 @@ const SecondYear = () => {
       </section>
 
       {/* Learning Resources */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Learning Resources</h2>
+          <h2 className="text-4xl font-bold text-center text-foreground mb-12">Learning Resources</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {resources.map((resource, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-background border-border">
                 <CardHeader>
                   <CardTitle className="text-xl text-primary">{resource.category}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     {resource.items.map((item, i) => (
-                      <li key={i} className="flex items-start text-gray-700">
-                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></span>
-                        {item}
+                      <li key={i} className="flex items-start">
+                        <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <a 
+                          href={item.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-foreground hover:text-primary transition-colors"
+                        >
+                          {item.name}
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -221,23 +228,23 @@ const SecondYear = () => {
       </section>
 
       {/* Sample Projects */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 cool-blue-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Projects to Build</h2>
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Projects to Build</h2>
           <div className="max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow bg-background border-border">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary text-center">Full-Stack Projects</CardTitle>
-                <p className="text-gray-600 text-center">Build these projects to showcase your skills</p>
+                <p className="text-muted-foreground text-center">Build these projects to showcase your skills</p>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {projects.map((project, index) => (
-                    <div key={index} className="flex items-center p-4 bg-white rounded-lg border">
+                    <div key={index} className="flex items-center p-4 bg-card rounded-lg border border-border">
                       <span className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold mr-4">
                         {index + 1}
                       </span>
-                      <span className="text-gray-700">{project}</span>
+                      <span className="text-foreground">{project}</span>
                     </div>
                   ))}
                 </div>
@@ -248,9 +255,9 @@ const SecondYear = () => {
       </section>
 
       {/* Important Tips */}
-      <section className="py-16 bg-blue-50">
+      <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Critical Success Tips for 2nd Year</h2>
+          <h2 className="text-4xl font-bold text-center text-foreground mb-12">Critical Success Tips for 2nd Year</h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
@@ -279,10 +286,10 @@ const SecondYear = () => {
                   description: "Maintain a strong GitHub profile, write good README files."
                 }
               ].map((tip, index) => (
-                <Card key={index} className="border-l-4 border-l-blue-500 hover:shadow-lg transition-shadow">
+                <Card key={index} className="border-l-4 border-l-primary hover:shadow-lg transition-shadow bg-background border-border">
                   <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{tip.title}</h3>
-                    <p className="text-gray-600">{tip.description}</p>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">{tip.title}</h3>
+                    <p className="text-muted-foreground">{tip.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -292,13 +299,13 @@ const SecondYear = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-cyan-600 text-white">
+      <section className="py-16 hero-gradient text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready for Specialization?</h2>
-          <p className="text-xl mb-8">
+          <p className="text-xl mb-8 text-gray-100">
             With strong fundamentals and project experience, it's time to choose your specialization in 3rd year!
           </p>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 text-lg" asChild>
+          <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg" asChild>
             <a href="/third-year">Explore 3rd Year Guide</a>
           </Button>
         </div>

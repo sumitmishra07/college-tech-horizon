@@ -32,37 +32,37 @@ const FirstYear = () => {
     {
       category: "Programming (C++)",
       items: [
-        "Apna College C++ Course - CodeHelp by Babbar",
-        "C++ Tutorial by FreeCodeCamp",
-        "Programming with Mosh - C++ Course",
-        "GeeksforGeeks C++ Articles"
+        { name: "Apna College C++ Course - CodeHelp by Babbar", url: "https://www.youtube.com/watch?v=z9bZufPHFLU&list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ" },
+        { name: "C++ Tutorial by FreeCodeCamp", url: "https://www.youtube.com/watch?v=vLnPwxZdW4Y" },
+        { name: "Programming with Mosh - C++ Course", url: "https://www.youtube.com/watch?v=ZzaPdXTrSb8" },
+        { name: "GeeksforGeeks C++ Articles", url: "https://www.geeksforgeeks.org/c-plus-plus/" }
       ]
     },
     {
       category: "Programming (Python)",
       items: [
-        "Python Tutorial by Programming with Mosh",
-        "Automate the Boring Stuff with Python",
-        "Python for Everybody by University of Michigan",
-        "CS50 Introduction to Programming with Python"
+        { name: "Python Tutorial by Programming with Mosh", url: "https://www.youtube.com/watch?v=_uQrJ0TkZlc" },
+        { name: "Automate the Boring Stuff with Python", url: "https://automatetheboringstuff.com/" },
+        { name: "Python for Everybody by University of Michigan", url: "https://www.coursera.org/specializations/python" },
+        { name: "CS50 Introduction to Programming with Python", url: "https://cs50.harvard.edu/python/2022/" }
       ]
     },
     {
       category: "Data Structures & Algorithms",
       items: [
-        "Love Babbar DSA Sheet",
-        "Striver's A2Z DSA Course",
-        "Introduction to Algorithms (CLRS)",
-        "LeetCode Easy Problems"
+        { name: "Love Babbar DSA Sheet", url: "https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view" },
+        { name: "Striver's A2Z DSA Course", url: "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/" },
+        { name: "Introduction to Algorithms (CLRS)", url: "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/" },
+        { name: "LeetCode Easy Problems", url: "https://leetcode.com/problemset/all/?difficulty=EASY" }
       ]
     },
     {
       category: "Development Tools",
       items: [
-        "Git & GitHub Crash Course by Traversy Media",
-        "Git Tutorial by Atlassian",
-        "VS Code Tips and Tricks",
-        "Command Line Basics by FreeCodeCamp"
+        { name: "Git & GitHub Crash Course by Traversy Media", url: "https://www.youtube.com/watch?v=SWYqp7iY_Tc" },
+        { name: "Git Tutorial by Atlassian", url: "https://www.atlassian.com/git/tutorials" },
+        { name: "VS Code Tips and Tricks", url: "https://www.youtube.com/watch?v=ifTF3ags0XI" },
+        { name: "Command Line Basics by FreeCodeCamp", url: "https://www.youtube.com/watch?v=yz7nYlnXLfE" }
       ]
     }
   ];
@@ -77,22 +77,22 @@ const FirstYear = () => {
   ];
 
   const platforms = [
-    { name: "LeetCode", description: "Start with Easy problems", url: "leetcode.com" },
-    { name: "CodeStudio", description: "Practice coding problems", url: "codestudio.com" },
-    { name: "HackerRank", description: "Programming challenges", url: "hackerrank.com" },
-    { name: "GeeksforGeeks", description: "Theory and practice", url: "geeksforgeeks.org" }
+    { name: "LeetCode", description: "Start with Easy problems", url: "https://leetcode.com" },
+    { name: "CodeStudio", description: "Practice coding problems", url: "https://www.codingninjas.com/studio" },
+    { name: "HackerRank", description: "Programming challenges", url: "https://www.hackerrank.com" },
+    { name: "GeeksforGeeks", description: "Theory and practice", url: "https://www.geeksforgeeks.org" }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16">
+      <section className="hero-gradient text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-4">1st Year - Foundation Phase</h1>
-            <p className="text-xl mb-6 max-w-3xl mx-auto">
+            <p className="text-xl mb-6 max-w-3xl mx-auto text-gray-100">
               Build strong programming fundamentals and start your coding journey. This year is all about learning the basics right!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -106,20 +106,20 @@ const FirstYear = () => {
       </section>
 
       {/* Key Focus Areas */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Key Focus Areas</h2>
+          <h2 className="text-4xl font-bold text-center text-foreground mb-12">Key Focus Areas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {focusAreas.map((area, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-background border-border">
                 <CardHeader>
                   <CardTitle className="text-xl text-primary">{area.title}</CardTitle>
-                  <p className="text-gray-600">{area.description}</p>
+                  <p className="text-muted-foreground">{area.description}</p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     {area.topics.map((topic, i) => (
-                      <li key={i} className="flex items-center text-gray-700">
+                      <li key={i} className="flex items-center text-foreground">
                         <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
                         {topic}
                       </li>
@@ -133,21 +133,28 @@ const FirstYear = () => {
       </section>
 
       {/* Learning Resources */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 cool-blue-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Learning Resources</h2>
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Learning Resources</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {resources.map((resource, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-background border-border">
                 <CardHeader>
                   <CardTitle className="text-xl text-primary">{resource.category}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     {resource.items.map((item, i) => (
-                      <li key={i} className="flex items-start text-gray-700">
-                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></span>
-                        {item}
+                      <li key={i} className="flex items-start">
+                        <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        <a 
+                          href={item.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-foreground hover:text-primary transition-colors"
+                        >
+                          {item.name}
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -159,16 +166,23 @@ const FirstYear = () => {
       </section>
 
       {/* Practice Platforms */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Recommended Practice Platforms</h2>
+          <h2 className="text-4xl font-bold text-center text-foreground mb-12">Recommended Practice Platforms</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {platforms.map((platform, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow bg-background border-border">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-primary mb-2">{platform.name}</h3>
-                  <p className="text-gray-600 mb-3">{platform.description}</p>
-                  <p className="text-sm text-gray-500">{platform.url}</p>
+                  <p className="text-muted-foreground mb-3">{platform.description}</p>
+                  <a 
+                    href={platform.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sm text-primary hover:underline"
+                  >
+                    Visit Platform →
+                  </a>
                 </CardContent>
               </Card>
             ))}
@@ -177,23 +191,23 @@ const FirstYear = () => {
       </section>
 
       {/* Sample Projects */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 cool-blue-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Projects to Build</h2>
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Projects to Build</h2>
           <div className="max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow bg-background border-border">
               <CardHeader>
                 <CardTitle className="text-2xl text-primary text-center">Beginner-Friendly Projects</CardTitle>
-                <p className="text-gray-600 text-center">Start with these simple projects to apply what you learn</p>
+                <p className="text-muted-foreground text-center">Start with these simple projects to apply what you learn</p>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {projects.map((project, index) => (
-                    <div key={index} className="flex items-center p-4 bg-white rounded-lg border">
+                    <div key={index} className="flex items-center p-4 bg-card rounded-lg border border-border">
                       <span className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold mr-4">
                         {index + 1}
                       </span>
-                      <span className="text-gray-700">{project}</span>
+                      <span className="text-foreground">{project}</span>
                     </div>
                   ))}
                 </div>
@@ -204,9 +218,9 @@ const FirstYear = () => {
       </section>
 
       {/* What NOT to Miss */}
-      <section className="py-16 bg-red-50">
+      <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">What NOT to Miss in 1st Year</h2>
+          <h2 className="text-4xl font-bold text-center text-foreground mb-12">What NOT to Miss in 1st Year</h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
@@ -235,10 +249,10 @@ const FirstYear = () => {
                   description: "Don't just learn syntax. Focus on solving problems and logical thinking."
                 }
               ].map((tip, index) => (
-                <Card key={index} className="border-l-4 border-l-red-500 hover:shadow-lg transition-shadow">
+                <Card key={index} className="border-l-4 border-l-primary hover:shadow-lg transition-shadow bg-background border-border">
                   <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{tip.title}</h3>
-                    <p className="text-gray-600">{tip.description}</p>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">{tip.title}</h3>
+                    <p className="text-muted-foreground">{tip.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -248,13 +262,13 @@ const FirstYear = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-purple-600 to-pink-600 text-white">
+      <section className="py-16 hero-gradient text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready for 2nd Year?</h2>
-          <p className="text-xl mb-8">
+          <p className="text-xl mb-8 text-gray-100">
             Once you're comfortable with programming basics and simple DSA, move to the next level!
           </p>
-          <Button size="lg" className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-4 text-lg" asChild>
+          <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg" asChild>
             <a href="/second-year">Explore 2nd Year Guide</a>
           </Button>
         </div>
