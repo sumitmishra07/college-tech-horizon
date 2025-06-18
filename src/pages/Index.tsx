@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import YearCard from "@/components/YearCard";
@@ -144,61 +143,6 @@ const Index = () => {
                 View All Domains
               </Button>
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Success Stories Section */}
-      <section className="py-16 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Success Stories</h2>
-            <p className="text-xl text-muted-foreground">Real students, real achievements</p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                name: "Ananya Sharma",
-                achievement: "Google SWE Intern",
-                story: "Started coding in 1st year, followed our DSA roadmap, and landed at Google in 3rd year!",
-                college: "IIT Delhi",
-                package: "₹45 LPA"
-              },
-              {
-                name: "Rohan Kumar",
-                achievement: "Full Stack Developer",
-                story: "Built 5+ projects following our web dev path. Now working at a unicorn startup!",
-                college: "NIT Trichy",
-                package: "₹28 LPA"
-              },
-              {
-                name: "Priya Patel",
-                achievement: "ML Engineer",
-                story: "Discovered ML in 2nd year through our guide. Now building AI solutions at Microsoft!",
-                college: "BITS Pilani",
-                package: "₹35 LPA"
-              }
-            ].map((story, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-all duration-300 bg-background border-border">
-                <CardContent className="p-6">
-                  <div className="text-center mb-4">
-                    <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white text-xl font-bold">
-                      {story.name[0]}
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground">{story.name}</h3>
-                    <p className="text-primary font-medium">{story.achievement}</p>
-                    <p className="text-sm text-muted-foreground">{story.college}</p>
-                  </div>
-                  <p className="text-muted-foreground text-center mb-4 italic">"{story.story}"</p>
-                  <div className="text-center">
-                    <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
-                      {story.package}
-                    </span>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>

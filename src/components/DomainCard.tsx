@@ -13,9 +13,9 @@ interface DomainCardProps {
 
 const DomainCard = ({ title, description, skills, avgSalary, jobRoles, color }: DomainCardProps) => {
   return (
-    <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-background border-border">
+    <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-background border-border h-full flex flex-col">
       <div className={`h-1 ${color}`}></div>
-      <CardContent className="p-6">
+      <CardContent className="p-6 flex-1 flex flex-col">
         <h3 className="text-xl font-semibold mb-3 text-foreground">{title}</h3>
         <p className="text-muted-foreground mb-4 leading-relaxed">{description}</p>
         
@@ -40,7 +40,7 @@ const DomainCard = ({ title, description, skills, avgSalary, jobRoles, color }: 
           </div>
         </div>
         
-        <div className="mb-6">
+        <div className="mb-6 flex-1">
           <h4 className="font-medium text-foreground mb-2">Job Roles:</h4>
           <ul className="space-y-1">
             {jobRoles.slice(0, 3).map((role, index) => (
@@ -52,7 +52,7 @@ const DomainCard = ({ title, description, skills, avgSalary, jobRoles, color }: 
           </ul>
         </div>
         
-        <Button variant="outline" className="w-full border-border text-foreground hover:bg-muted">
+        <Button variant="outline" className="w-full border-border text-foreground hover:bg-muted mt-auto">
           Learn More
         </Button>
       </CardContent>
