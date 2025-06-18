@@ -1,9 +1,17 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import FirstYear from "./pages/FirstYear";
+import SecondYear from "./pages/SecondYear";
+import ThirdYear from "./pages/ThirdYear";
+import FourthYear from "./pages/FourthYear";
+import Domains from "./pages/Domains";
+import Resources from "./pages/Resources";
+import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -16,7 +24,13 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="/first-year" element={<FirstYear />} />
+          <Route path="/second-year" element={<SecondYear />} />
+          <Route path="/third-year" element={<ThirdYear />} />
+          <Route path="/fourth-year" element={<FourthYear />} />
+          <Route path="/domains" element={<Domains />} />
+          <Route path="/resources" element={<Resources />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
