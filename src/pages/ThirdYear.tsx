@@ -1,8 +1,8 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Youtube, ExternalLink } from "lucide-react";
 
 const ThirdYear = () => {
   const domains = [
@@ -10,25 +10,45 @@ const ThirdYear = () => {
       title: "Machine Learning & Data Science",
       description: "Work with data, build intelligent systems",
       skills: ["Python", "Pandas", "Scikit-learn", "TensorFlow", "Statistics"],
-      resources: ["Andrew Ng ML Course", "Kaggle Learn", "Fast.ai Course", "StatQuest YouTube"]
+      resources: [
+        { name: "Andrew Ng ML Course", url: "https://www.coursera.org/learn/machine-learning" },
+        { name: "Kaggle Learn", url: "https://www.kaggle.com/learn" },
+        { name: "Fast.ai Course", url: "https://www.fast.ai/" },
+        { name: "StatQuest YouTube", url: "https://www.youtube.com/user/joshstarmer" }
+      ]
     },
     {
       title: "Full Stack Development",
       description: "Build scalable web applications",
       skills: ["React/Angular", "Node.js", "Cloud Services", "DevOps", "System Design"],
-      resources: ["Advanced React Patterns", "System Design Primer", "AWS/GCP Courses", "Docker & Kubernetes"]
+      resources: [
+        { name: "React Documentation", url: "https://react.dev/" },
+        { name: "System Design Primer", url: "https://github.com/donnemartin/system-design-primer" },
+        { name: "AWS Free Tier", url: "https://aws.amazon.com/free/" },
+        { name: "Docker Tutorial", url: "https://www.docker.com/get-started" }
+      ]
     },
     {
       title: "Mobile App Development",
       description: "Create mobile applications for iOS and Android",
       skills: ["React Native", "Flutter", "Kotlin", "Swift", "Firebase"],
-      resources: ["Flutter Course by Angela Yu", "React Native by Stephen Grider", "Android Kotlin Course", "iOS Swift Course"]
+      resources: [
+        { name: "Flutter Documentation", url: "https://flutter.dev/docs" },
+        { name: "React Native Docs", url: "https://reactnative.dev/docs/getting-started" },
+        { name: "Android Developer Guide", url: "https://developer.android.com/guide" },
+        { name: "iOS Developer Guide", url: "https://developer.apple.com/documentation/" }
+      ]
     },
     {
       title: "Cybersecurity",
       description: "Protect systems and networks from threats",
       skills: ["Network Security", "Penetration Testing", "Cryptography", "OWASP", "Linux"],
-      resources: ["Ethical Hacking by EC-Council", "TryHackMe", "OSCP Preparation", "Cybrary Courses"]
+      resources: [
+        { name: "OWASP Top 10", url: "https://owasp.org/www-project-top-ten/" },
+        { name: "TryHackMe", url: "https://tryhackme.com/" },
+        { name: "Cybrary", url: "https://www.cybrary.it/" },
+        { name: "Kali Linux", url: "https://www.kali.org/" }
+      ]
     }
   ];
 
@@ -56,22 +76,22 @@ const ThirdYear = () => {
   ];
 
   const openSourcePrograms = [
-    { name: "Google Summer of Code (GSoC)", period: "March - September", stipend: "$1500-$6600" },
-    { name: "LFX Mentorship", period: "Year-round", stipend: "$3000-$6600" },
-    { name: "Outreachy", period: "May - August", stipend: "$7000" },
-    { name: "MLH Fellowship", period: "12 weeks", stipend: "Varies" }
+    { name: "Google Summer of Code (GSoC)", period: "March - September", stipend: "$1500-$6600", url: "https://summerofcode.withgoogle.com/" },
+    { name: "LFX Mentorship", period: "Year-round", stipend: "$3000-$6600", url: "https://lfx.linuxfoundation.org/tools/mentorship/" },
+    { name: "Outreachy", period: "May - August", stipend: "$7000", url: "https://www.outreachy.org/" },
+    { name: "MLH Fellowship", period: "12 weeks", stipend: "Varies", url: "https://fellowship.mlh.io/" }
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-16">
+      <section className="hero-gradient text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-4">3rd Year - Specialization Phase</h1>
-            <p className="text-xl mb-6 max-w-3xl mx-auto">
+            <p className="text-xl mb-6 max-w-3xl mx-auto text-gray-100">
               Choose your domain, contribute to open source, and build industry-level projects. This is where you become a specialist!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -85,34 +105,42 @@ const ThirdYear = () => {
       </section>
 
       {/* Choose Your Domain */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Choose Your Specialization</h2>
+          <h2 className="text-4xl font-bold text-center text-foreground mb-12">Choose Your Specialization</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {domains.map((domain, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-background border-border">
                 <CardHeader>
                   <CardTitle className="text-xl text-primary">{domain.title}</CardTitle>
-                  <p className="text-gray-600">{domain.description}</p>
+                  <p className="text-muted-foreground">{domain.description}</p>
                 </CardHeader>
                 <CardContent>
                   <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Key Skills:</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Key Skills:</h4>
                     <div className="flex flex-wrap gap-2">
                       {domain.skills.map((skill, i) => (
-                        <span key={i} className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">
+                        <span key={i} className="bg-blue-900 text-blue-100 px-2 py-1 rounded text-sm">
                           {skill}
                         </span>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-2">Learning Resources:</h4>
+                    <h4 className="font-semibold text-foreground mb-2">Learning Resources:</h4>
                     <ul className="space-y-1">
                       {domain.resources.map((resource, i) => (
-                        <li key={i} className="text-gray-600 text-sm flex items-center">
-                          <span className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2"></span>
-                          {resource}
+                        <li key={i} className="text-muted-foreground text-sm flex items-center">
+                          <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2"></span>
+                          <a 
+                            href={resource.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="hover:text-primary transition-colors flex items-center gap-1"
+                          >
+                            {resource.name}
+                            <ExternalLink className="w-3 h-3" />
+                          </a>
                         </li>
                       ))}
                     </ul>
@@ -125,20 +153,20 @@ const ThirdYear = () => {
       </section>
 
       {/* Key Focus Areas */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 cool-blue-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Key Focus Areas</h2>
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Key Focus Areas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {focusAreas.map((area, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-background border-border">
                 <CardHeader>
                   <CardTitle className="text-xl text-primary">{area.title}</CardTitle>
-                  <p className="text-gray-600">{area.description}</p>
+                  <p className="text-muted-foreground">{area.description}</p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     {area.tasks.map((task, i) => (
-                      <li key={i} className="flex items-start text-gray-700">
+                      <li key={i} className="flex items-start text-foreground">
                         <span className="w-2 h-2 bg-primary rounded-full mr-3 mt-2"></span>
                         {task}
                       </li>
@@ -152,16 +180,24 @@ const ThirdYear = () => {
       </section>
 
       {/* Open Source Programs */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Open Source Programs</h2>
+          <h2 className="text-4xl font-bold text-center text-foreground mb-12">Open Source Programs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {openSourcePrograms.map((program, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow bg-background border-border">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-primary mb-2">{program.name}</h3>
-                  <p className="text-gray-600 mb-2">{program.period}</p>
-                  <p className="text-green-600 font-bold">{program.stipend}</p>
+                  <p className="text-muted-foreground mb-2">{program.period}</p>
+                  <p className="text-green-400 font-bold mb-3">{program.stipend}</p>
+                  <a 
+                    href={program.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline text-sm flex items-center justify-center gap-1"
+                  >
+                    Learn More <ExternalLink className="w-3 h-3" />
+                  </a>
                 </CardContent>
               </Card>
             ))}
@@ -295,13 +331,13 @@ const ThirdYear = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+      <section className="py-16 hero-gradient text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready for Placement Prep?</h2>
-          <p className="text-xl mb-8">
+          <p className="text-xl mb-8 text-gray-100">
             With domain expertise and project experience, you're ready to prepare for your dream job in 4th year!
           </p>
-          <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 text-lg" asChild>
+          <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg" asChild>
             <a href="/fourth-year">Explore 4th Year Guide</a>
           </Button>
         </div>

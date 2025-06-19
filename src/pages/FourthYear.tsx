@@ -1,8 +1,8 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ExternalLink } from "lucide-react";
 
 const FourthYear = () => {
   const preparationTracks = [
@@ -36,34 +36,34 @@ const FourthYear = () => {
     {
       category: "Technical Skills",
       items: [
-        "LeetCode Top 150 problems",
-        "System Design fundamentals",
-        "Database design and optimization",
-        "Operating Systems concepts",
-        "Computer Networks basics",
-        "Low-level design patterns"
+        { name: "LeetCode Top 150 problems", url: "https://leetcode.com/studyplan/top-interview-150/" },
+        { name: "System Design fundamentals", url: "https://github.com/donnemartin/system-design-primer" },
+        { name: "Database design and optimization", url: "https://www.postgresql.org/docs/" },
+        { name: "Operating Systems concepts", url: "https://pages.cs.wisc.edu/~remzi/OSTEP/" },
+        { name: "Computer Networks basics", url: "https://www.geeksforgeeks.org/computer-network-tutorials/" },
+        { name: "Low-level design patterns", url: "https://refactoring.guru/design-patterns" }
       ]
     },
     {
       category: "Soft Skills",
       items: [
-        "Communication skills",
-        "Problem-solving approach",
-        "Leadership examples",
-        "Team collaboration stories",
-        "Conflict resolution",
-        "Adaptability examples"
+        { name: "Communication skills", url: "https://www.coursera.org/learn/wharton-communication-skills" },
+        { name: "Problem-solving approach", url: "https://www.khanacademy.org/computing/computer-programming" },
+        { name: "Leadership examples", url: "https://www.ted.com/topics/leadership" },
+        { name: "Team collaboration stories", url: "https://www.atlassian.com/team-playbook" },
+        { name: "Conflict resolution", url: "https://www.coursera.org/learn/conflict-resolution" },
+        { name: "Adaptability examples", url: "https://hbr.org/topic/adaptability" }
       ]
     },
     {
       category: "Interview Preparation",
       items: [
-        "Mock interviews (technical)",
-        "Mock interviews (HR)",
-        "Company-specific preparation",
-        "Behavioral questions practice",
-        "Salary negotiation prep",
-        "Follow-up strategies"
+        { name: "Mock interviews (technical)", url: "https://pramp.com/" },
+        { name: "Mock interviews (HR)", url: "https://www.interviewbuddy.in/" },
+        { name: "Company-specific preparation", url: "https://www.glassdoor.co.in/" },
+        { name: "Behavioral questions practice", url: "https://www.themuse.com/advice/30-behavioral-interview-questions" },
+        { name: "Salary negotiation prep", url: "https://www.levels.fyi/" },
+        { name: "Follow-up strategies", url: "https://www.indeed.com/career-advice/interviewing/how-to-follow-up-after-an-interview" }
       ]
     }
   ];
@@ -90,15 +90,15 @@ const FourthYear = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-background">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-16">
+      <section className="hero-gradient text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-5xl font-bold mb-4">4th Year - Career Preparation</h1>
-            <p className="text-xl mb-6 max-w-3xl mx-auto">
+            <p className="text-xl mb-6 max-w-3xl mx-auto text-gray-100">
               The final lap! Focus on placements, higher studies preparation, or launching your startup. This is where all your hard work pays off!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -112,24 +112,24 @@ const FourthYear = () => {
       </section>
 
       {/* Choose Your Track */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Choose Your Career Track</h2>
+          <h2 className="text-4xl font-bold text-center text-foreground mb-12">Choose Your Career Track</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {preparationTracks.map((track, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-background border-border">
                 <CardHeader>
                   <CardTitle className="text-xl text-primary">{track.title}</CardTitle>
-                  <p className="text-gray-600">{track.description}</p>
-                  <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm w-fit">
+                  <p className="text-muted-foreground">{track.description}</p>
+                  <span className="bg-orange-900 text-orange-100 px-3 py-1 rounded-full text-sm w-fit">
                     {track.timeline}
                   </span>
                 </CardHeader>
                 <CardContent>
-                  <h4 className="font-semibold text-gray-900 mb-2">Key Activities:</h4>
+                  <h4 className="font-semibold text-foreground mb-2">Key Activities:</h4>
                   <ul className="space-y-2">
                     {track.activities.map((activity, i) => (
-                      <li key={i} className="flex items-center text-gray-700">
+                      <li key={i} className="flex items-center text-muted-foreground">
                         <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
                         {activity}
                       </li>
@@ -143,21 +143,29 @@ const FourthYear = () => {
       </section>
 
       {/* Placement Preparation */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 cool-blue-gradient">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Placement Preparation Checklist</h2>
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Placement Preparation Checklist</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {placementPrep.map((category, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-background border-border">
                 <CardHeader>
                   <CardTitle className="text-xl text-primary">{category.category}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     {category.items.map((item, i) => (
-                      <li key={i} className="flex items-start text-gray-700">
-                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></span>
-                        {item}
+                      <li key={i} className="flex items-start text-muted-foreground">
+                        <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2"></span>
+                        <a 
+                          href={item.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-primary transition-colors flex items-center gap-1"
+                        >
+                          {item.name}
+                          <ExternalLink className="w-3 h-3" />
+                        </a>
                       </li>
                     ))}
                   </ul>
@@ -169,25 +177,25 @@ const FourthYear = () => {
       </section>
 
       {/* Company Tiers */}
-      <section className="py-16 bg-white">
+      <section className="py-16 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Company Tiers & Expectations</h2>
+          <h2 className="text-4xl font-bold text-center text-foreground mb-12">Company Tiers & Expectations</h2>
           <div className="space-y-6">
             {companies.map((tier, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-background border-border">
                 <CardContent className="p-6">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-primary mb-2">{tier.tier}</h3>
-                      <p className="text-gray-600 mb-3">
+                      <p className="text-muted-foreground mb-3">
                         <strong>Companies:</strong> {tier.companies.join(", ")}
                       </p>
-                      <p className="text-gray-600">
+                      <p className="text-muted-foreground">
                         <strong>Requirements:</strong> {tier.requirements.join(", ")}
                       </p>
                     </div>
                     <div className="mt-4 lg:mt-0">
-                      <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full font-bold text-lg">
+                      <span className="bg-green-900 text-green-100 px-4 py-2 rounded-full font-bold text-lg">
                         {tier.package}
                       </span>
                     </div>
@@ -392,17 +400,17 @@ const FourthYear = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-orange-600 to-red-600 text-white">
+      <section className="py-16 hero-gradient text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Land Your Dream Job?</h2>
-          <p className="text-xl mb-8">
+          <p className="text-xl mb-8 text-gray-100">
             You've come so far! Now it's time to showcase your skills and land that perfect opportunity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 text-lg" asChild>
+            <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg" asChild>
               <a href="/resources">Browse Resources</a>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-orange-600 px-8 py-4 text-lg" asChild>
+            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg" asChild>
               <a href="/blog">Read Success Stories</a>
             </Button>
           </div>
