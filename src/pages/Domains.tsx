@@ -1,11 +1,15 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import DomainCard from "@/components/DomainCard";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useEffect } from "react";
 
 const Domains = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const domains = [
     {
       title: "Data Structures & Algorithms",
@@ -13,7 +17,8 @@ const Domains = () => {
       skills: ["C++", "Python", "Java", "Algorithms", "Problem Solving", "Mathematical Thinking", "Time Complexity"],
       avgSalary: "₹15-50 LPA",
       jobRoles: ["Software Engineer", "Competitive Programmer", "Algorithm Developer", "Problem Setter", "SDE-1/2/3"],
-      color: "bg-blue-500"
+      color: "bg-blue-500",
+      roadmapUrl: "/dsa-roadmap"
     },
     {
       title: "Full Stack Web Development",
@@ -113,7 +118,7 @@ const Domains = () => {
       <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl font-bold mb-4">Explore Tech Domains</h1>
+            <h1 className="text-5xl font-bold mb-4 text-white">Explore Tech Domains</h1>
             <p className="text-xl mb-6 max-w-3xl mx-auto text-blue-100">
               Discover different career paths in technology. Find your passion and build expertise in domains that match your interests and market demand.
             </p>

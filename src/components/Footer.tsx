@@ -1,60 +1,98 @@
 
-import { Link } from "react-router-dom";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { ExternalLink, Mail, Github, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-background border-t border-border">
-      <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gray-900 text-white py-12 border-t border-gray-800">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Brand */}
+          {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="text-2xl font-bold text-primary">
-              TechRoadmap
-            </Link>
-            <p className="mt-2 text-muted-foreground">
-              Your complete guide to a successful B.Tech journey. From foundation to placement, we've got you covered.
+            <h3 className="text-2xl font-bold text-blue-400 mb-4">TechRoadmap</h3>
+            <p className="text-gray-400 mb-4 max-w-md">
+              Your comprehensive guide to navigating the tech industry. From beginner resources 
+              to advanced career paths, we help you build the skills that matter.
             </p>
-            <div className="mt-4">
-              <p className="text-sm text-muted-foreground">
-                Made with ❤️ for B.Tech students across India
-              </p>
+            <div className="flex space-x-4">
+              <a 
+                href="https://github.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Github className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://linkedin.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a 
+                href="https://twitter.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+              >
+                <Twitter className="w-6 h-6" />
+              </a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-foreground">Quick Links</h3>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><Link to="/first-year" className="text-muted-foreground hover:text-primary transition-colors">1st Year Guide</Link></li>
-              <li><Link to="/second-year" className="text-muted-foreground hover:text-primary transition-colors">2nd Year Guide</Link></li>
-              <li><Link to="/third-year" className="text-muted-foreground hover:text-primary transition-colors">3rd Year Guide</Link></li>
-              <li><Link to="/fourth-year" className="text-muted-foreground hover:text-primary transition-colors">4th Year Guide</Link></li>
-              <li><Link to="/domains" className="text-muted-foreground hover:text-primary transition-colors">Explore Domains</Link></li>
+              <li>
+                <a href="/domains" className="text-gray-400 hover:text-white transition-colors">
+                  Tech Domains
+                </a>
+              </li>
+              <li>
+                <a href="/resources" className="text-gray-400 hover:text-white transition-colors">
+                  Learning Resources
+                </a>
+              </li>
+              <li>
+                <a href="/blog" className="text-gray-400 hover:text-white transition-colors">
+                  Success Stories
+                </a>
+              </li>
+              <li>
+                <a href="/about" className="text-gray-400 hover:text-white transition-colors">
+                  About Us
+                </a>
+              </li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-foreground">Resources</h3>
-            <ul className="space-y-2">
-              <li><Link to="/resources" className="text-muted-foreground hover:text-primary transition-colors">Tools & Platforms</Link></li>
-              <li><Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog & Videos</Link></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Newsletter</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors">Contact Us</a></li>
-            </ul>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <div className="space-y-2">
+              <a 
+                href="mailto:contact@techroadmap.com" 
+                className="text-gray-400 hover:text-white transition-colors flex items-center"
+              >
+                <Mail className="w-4 h-4 mr-2" />
+                contact@techroadmap.com
+              </a>
+              <p className="text-gray-400">
+                Building the future of tech education
+              </p>
+            </div>
           </div>
         </div>
 
-        {/* Bottom Section */}
-        <div className="mt-8 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center">
-          <div className="text-muted-foreground text-sm">
-            © 2024 TechRoadmap. All rights reserved.
-          </div>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">About</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Privacy</a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Terms</a>
-          </div>
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © 2024 TechRoadmap. All rights reserved. Built with ❤️ for aspiring developers.
+          </p>
         </div>
       </div>
     </footer>

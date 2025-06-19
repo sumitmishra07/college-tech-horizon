@@ -10,9 +10,16 @@ interface DomainCardProps {
   avgSalary: string;
   jobRoles: string[];
   color: string;
+  roadmapUrl?: string;
 }
 
-const DomainCard = ({ title, description, skills, avgSalary, jobRoles, color }: DomainCardProps) => {
+const DomainCard = ({ title, description, skills, avgSalary, jobRoles, color, roadmapUrl }: DomainCardProps) => {
+  const handleLearnMore = () => {
+    if (roadmapUrl) {
+      window.location.href = roadmapUrl;
+    }
+  };
+
   return (
     <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-gray-800/50 border-gray-700 h-full flex flex-col">
       <div className={`h-1 ${color}`}></div>
@@ -53,7 +60,12 @@ const DomainCard = ({ title, description, skills, avgSalary, jobRoles, color }: 
           </ul>
         </div>
         
-        <Button variant="outline" className="w-full border-gray-600 text-gray-300 hover:bg-gray-600 hover:text-white mt-auto">
+        <Button 
+          variant="outline" 
+          className="w-full border-gray-600 text-gray-300 hover:bg-gray-600 hover:text-white mt-auto"
+          onClick={handleLearnMore}
+          disabled={!roadmapUrl}
+        >
           Learn More <ExternalLink className="w-4 h-4 ml-2" />
         </Button>
       </CardContent>

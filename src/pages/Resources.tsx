@@ -1,10 +1,16 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Briefcase, GraduationCap, Code, BookOpen, Users, Laptop } from "lucide-react";
+import { ExternalLink, Briefcase, GraduationCap, Code, BookOpen, Users, Laptop, Youtube, Play } from "lucide-react";
+import { useEffect } from "react";
 
 const Resources = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const jobPlatforms = [
     {
       name: "LinkedIn",
@@ -75,6 +81,113 @@ const Resources = () => {
       url: "https://www.geeksforgeeks.org/jobs/",
       category: "Tech Jobs",
       icon: <Code className="w-6 h-6" />
+    }
+  ];
+
+  const youtubeChannels = [
+    {
+      name: "FreeCodeCamp",
+      description: "Complete programming courses and tutorials",
+      url: "https://www.youtube.com/@freecodecamp",
+      subscribers: "8.9M",
+      category: "Programming",
+      playlists: [
+        { name: "Full Stack Development", url: "https://www.youtube.com/playlist?list=PLWKjhJtqVAbmGQoa3vFjeAMfZ7bHOxuUy" },
+        { name: "Python for Beginners", url: "https://www.youtube.com/playlist?list=PLWKjhJtqVAbkArDMazoARtNriQYMBnycU" },
+        { name: "JavaScript Course", url: "https://www.youtube.com/playlist?list=PLWKjhJtqVAbleDe3_ZA8h3AO2rXar-q2V" }
+      ],
+      icon: <Youtube className="w-6 h-6" />
+    },
+    {
+      name: "Code with Harry",
+      description: "Programming tutorials in Hindi and English",
+      url: "https://www.youtube.com/@CodeWithHarry",
+      subscribers: "5.3M",
+      category: "Programming",
+      playlists: [
+        { name: "Python Tutorial", url: "https://www.youtube.com/playlist?list=PLu0W_9lII9agICnT8t4iYVSZ3eykIAOME" },
+        { name: "Web Development", url: "https://www.youtube.com/playlist?list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg" },
+        { name: "DSA in One Shot", url: "https://www.youtube.com/playlist?list=PLu0W_9lII9ahIappRPN0MCAgtOu3lQjQi" }
+      ],
+      icon: <Youtube className="w-6 h-6" />
+    },
+    {
+      name: "Apna College",
+      description: "Programming and placement preparation",
+      url: "https://www.youtube.com/@ApnaCollegeOfficial",
+      subscribers: "4.8M",
+      category: "DSA & Placement",
+      playlists: [
+        { name: "Alpha Course - DSA", url: "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0b2nM6JHVCnAkhQRGiZMSJ" },
+        { name: "Java + DSA", url: "https://www.youtube.com/playlist?list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop" },
+        { name: "Web Development", url: "https://www.youtube.com/playlist?list=PLfqMhTWNBTe1WdeXlWWJP4v0VT9ON9kaD" }
+      ],
+      icon: <Youtube className="w-6 h-6" />
+    },
+    {
+      name: "Traversy Media",
+      description: "Modern web development and programming",
+      url: "https://www.youtube.com/@TraversyMedia",
+      subscribers: "2.2M",
+      category: "Web Development",
+      playlists: [
+        { name: "JavaScript Crash Course", url: "https://www.youtube.com/playlist?list=PLillGF-RfqbbnEGy3ROiLWk7JMCuSyQtX" },
+        { name: "React JS", url: "https://www.youtube.com/playlist?list=PLillGF-RfqbY3c2r0htQyVbDJJoBFE6Rb" },
+        { name: "Node.js", url: "https://www.youtube.com/playlist?list=PLillGF-RfqbZ2ybcoD2OaabW2P7Ws8CWu" }
+      ],
+      icon: <Youtube className="w-6 h-6" />
+    },
+    {
+      name: "The Net Ninja",
+      description: "Black-belt your development skills",
+      url: "https://www.youtube.com/@NetNinja",
+      subscribers: "1.1M",
+      category: "Web Development",
+      playlists: [
+        { name: "Complete React Tutorial", url: "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d" },
+        { name: "Node.js Tutorial", url: "https://www.youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp" },
+        { name: "Vue.js Tutorial", url: "https://www.youtube.com/playlist?list=PL4cUxeGkcC9hYYGbV60Vq3IXYNfDk8At1" }
+      ],
+      icon: <Youtube className="w-6 h-6" />
+    },
+    {
+      name: "Tech With Tim",
+      description: "Python, AI, and software development",
+      url: "https://www.youtube.com/@TechWithTim",
+      subscribers: "1.3M",
+      category: "Python & AI",
+      playlists: [
+        { name: "Python Tutorial", url: "https://www.youtube.com/playlist?list=PLzMcBGfZo4-mFu00qxl0a67RhjjZj3jXm" },
+        { name: "Machine Learning", url: "https://www.youtube.com/playlist?list=PLzMcBGfZo4-lak7tiFDec5_ZMItiIIfmh" },
+        { name: "Django Tutorial", url: "https://www.youtube.com/playlist?list=PLzMcBGfZo4-djqpSd2aFKPWAHNw8SMEuX" }
+      ],
+      icon: <Youtube className="w-6 h-6" />
+    },
+    {
+      name: "CS Dojo",
+      description: "Computer science and programming concepts",
+      url: "https://www.youtube.com/@CSDojo",
+      subscribers: "1.8M",
+      category: "Computer Science",
+      playlists: [
+        { name: "Data Structures and Algorithms", url: "https://www.youtube.com/playlist?list=PLBZBJbE_rGRV8D7XZ08LK6z-4zPoWzu5H" },
+        { name: "Python Tutorial", url: "https://www.youtube.com/playlist?list=PLBZBJbE_rGRWeh5mIBhD-hhDwSEDxogDg" },
+        { name: "Web Scraping", url: "https://www.youtube.com/playlist?list=PLBZBJbE_rGRVTuTrqz8rrxxr0bxe2wTJe" }
+      ],
+      icon: <Youtube className="w-6 h-6" />
+    },
+    {
+      name: "Kevin Powell",
+      description: "CSS and front-end development",
+      url: "https://www.youtube.com/@KevinPowell",
+      subscribers: "800K",
+      category: "CSS & Frontend",
+      playlists: [
+        { name: "CSS Grid", url: "https://www.youtube.com/playlist?list=PL4-IK0AVhVjPv5tfS82UF_iQgFp4Bl998" },
+        { name: "Flexbox", url: "https://www.youtube.com/playlist?list=PL4-IK0AVhVjMSb9c06AjRlTpvxL3otpUd" },
+        { name: "Responsive Design", url: "https://www.youtube.com/playlist?list=PL4-IK0AVhVjODqX-aXRD0RmAL3lFNbMR8" }
+      ],
+      icon: <Youtube className="w-6 h-6" />
     }
   ];
 
@@ -221,12 +334,13 @@ const Resources = () => {
       <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl font-bold mb-4">Learning Resources Hub</h1>
+            <h1 className="text-5xl font-bold mb-4 text-white">Learning Resources Hub</h1>
             <p className="text-xl mb-6 max-w-3xl mx-auto text-blue-100">
               Discover the best platforms, tools, and communities to accelerate your tech career. From learning to landing your dream job.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Job Platforms</span>
+              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">YouTube Channels</span>
               <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Learning Resources</span>
               <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Developer Tools</span>
               <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Communities</span>
@@ -269,8 +383,60 @@ const Resources = () => {
         </div>
       </section>
 
-      {/* Learning Resources */}
+      {/* YouTube Channels */}
       <section className="py-16 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Popular YouTube Channels</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {youtubeChannels.map((channel, index) => (
+              <Card key={index} className="bg-gray-800/50 border-gray-700 hover:shadow-xl transition-all duration-300">
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex items-center gap-2">
+                      {channel.icon}
+                      <span className="bg-red-600 text-white px-2 py-1 rounded-full text-xs">
+                        {channel.category}
+                      </span>
+                    </div>
+                    <span className="text-gray-400 text-sm">{channel.subscribers} subscribers</span>
+                  </div>
+                  <CardTitle className="text-xl text-white">{channel.name}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300 mb-4">{channel.description}</p>
+                  <div className="space-y-2 mb-4">
+                    <h4 className="text-sm font-medium text-gray-200">Popular Playlists:</h4>
+                    {channel.playlists.map((playlist, idx) => (
+                      <a
+                        key={idx}
+                        href={playlist.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block text-sm text-blue-400 hover:text-blue-300 flex items-center gap-1"
+                      >
+                        <Play className="w-3 h-3" />
+                        {playlist.name}
+                      </a>
+                    ))}
+                  </div>
+                  <Button 
+                    variant="outline" 
+                    className="w-full border-red-500 text-red-400 hover:bg-red-600 hover:text-white"
+                    asChild
+                  >
+                    <a href={channel.url} target="_blank" rel="noopener noreferrer">
+                      Visit Channel <ExternalLink className="w-4 h-4 ml-2" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Learning Resources */}
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Learning Resources</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -305,7 +471,7 @@ const Resources = () => {
       </section>
 
       {/* Developer Tools */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Essential Developer Tools</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -340,7 +506,7 @@ const Resources = () => {
       </section>
 
       {/* Community Resources */}
-      <section className="py-16 bg-gray-800/30">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Developer Communities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
