@@ -7,6 +7,10 @@ import Index from "./pages/Index";
 import Domains from "./pages/Domains";
 import Resources from "./pages/Resources";
 import Blog from "./pages/Blog";
+import FirstYear from "./pages/FirstYear";
+import SecondYear from "./pages/SecondYear";
+import ThirdYear from "./pages/ThirdYear";
+import FourthYear from "./pages/FourthYear";
 import DSARoadmap from "./pages/DSARoadmap";
 import WebDevRoadmap from "./pages/WebDevRoadmap";
 import MLRoadmap from "./pages/MLRoadmap";
@@ -30,6 +34,10 @@ const App = () => (
           <Route path="/domains" element={<Domains />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/first-year" element={<FirstYear />} />
+          <Route path="/second-year" element={<SecondYear />} />
+          <Route path="/third-year" element={<ThirdYear />} />
+          <Route path="/fourth-year" element={<FourthYear />} />
           <Route path="/dsa-roadmap" element={<DSARoadmap />} />
           <Route path="/webdev-roadmap" element={<WebDevRoadmap />} />
           <Route path="/ml-roadmap" element={<MLRoadmap />} />

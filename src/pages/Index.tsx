@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import YearCard from "@/components/YearCard";
@@ -53,7 +54,8 @@ const Index = () => {
       skills: ["C++", "Algorithms", "Data Structures", "Problem Solving"],
       avgSalary: "₹15-40 LPA",
       jobRoles: ["Software Engineer", "Problem Setter", "Algorithm Developer"],
-      color: "bg-blue-500"
+      color: "bg-blue-500",
+      roadmapUrl: "/dsa-roadmap"
     },
     {
       title: "Full Stack Development",
@@ -61,7 +63,8 @@ const Index = () => {
       skills: ["React", "Node.js", "Databases", "Cloud"],
       avgSalary: "₹12-35 LPA",
       jobRoles: ["Full Stack Developer", "Frontend Developer", "Backend Developer"],
-      color: "bg-cyan-500"
+      color: "bg-cyan-500",
+      roadmapUrl: "/webdev-roadmap"
     },
     {
       title: "Machine Learning & AI",
@@ -69,7 +72,8 @@ const Index = () => {
       skills: ["Python", "TensorFlow", "Statistics", "Data Analysis"],
       avgSalary: "₹18-50 LPA",
       jobRoles: ["ML Engineer", "Data Scientist", "AI Researcher"],
-      color: "bg-indigo-500"
+      color: "bg-indigo-500",
+      roadmapUrl: "/ml-roadmap"
     }
   ];
 

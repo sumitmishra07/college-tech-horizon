@@ -1,10 +1,14 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useEffect } from "react";
 
 const FirstYear = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const focusAreas = [
     {
       title: "Programming Fundamentals",
@@ -50,7 +54,7 @@ const FirstYear = () => {
     {
       category: "Data Structures & Algorithms",
       items: [
-        { name: "Love Babbar DSA Sheet", url: "https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view" },
+        { name: "Love Babbar DSA Sheet", url: "https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCi?usp=sharing" },
         { name: "Striver's A2Z DSA Course", url: "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/" },
         { name: "Introduction to Algorithms (CLRS)", url: "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/" },
         { name: "LeetCode Easy Problems", url: "https://leetcode.com/problemset/all/?difficulty=EASY" }
@@ -84,15 +88,15 @@ const FirstYear = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="hero-gradient text-white py-16">
+      <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl font-bold mb-4">1st Year - Foundation Phase</h1>
-            <p className="text-xl mb-6 max-w-3xl mx-auto text-gray-100">
+            <h1 className="text-5xl font-bold mb-4 text-white">1st Year - Foundation Phase</h1>
+            <p className="text-xl mb-6 max-w-3xl mx-auto text-blue-100">
               Build strong programming fundamentals and start your coding journey. This year is all about learning the basics right!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -106,21 +110,21 @@ const FirstYear = () => {
       </section>
 
       {/* Key Focus Areas */}
-      <section className="py-16 bg-card">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-12">Key Focus Areas</h2>
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Key Focus Areas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {focusAreas.map((area, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow bg-background border-border">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-gray-800/50 border-gray-700">
                 <CardHeader>
-                  <CardTitle className="text-xl text-primary">{area.title}</CardTitle>
-                  <p className="text-muted-foreground">{area.description}</p>
+                  <CardTitle className="text-xl text-blue-400">{area.title}</CardTitle>
+                  <p className="text-gray-300">{area.description}</p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-2">
                     {area.topics.map((topic, i) => (
-                      <li key={i} className="flex items-center text-foreground">
-                        <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                      <li key={i} className="flex items-center text-gray-300">
+                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                         {topic}
                       </li>
                     ))}
@@ -133,14 +137,14 @@ const FirstYear = () => {
       </section>
 
       {/* Learning Resources */}
-      <section className="py-16 cool-blue-gradient">
+      <section className="py-16 bg-gray-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Learning Resources</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {resources.map((resource, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow bg-background border-border">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-gray-800/50 border-gray-700">
                 <CardHeader>
-                  <CardTitle className="text-xl text-primary">{resource.category}</CardTitle>
+                  <CardTitle className="text-xl text-blue-400">{resource.category}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
@@ -151,7 +155,7 @@ const FirstYear = () => {
                           href={item.url} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-foreground hover:text-primary transition-colors"
+                          className="text-gray-300 hover:text-blue-400 transition-colors"
                         >
                           {item.name}
                         </a>
@@ -166,20 +170,20 @@ const FirstYear = () => {
       </section>
 
       {/* Practice Platforms */}
-      <section className="py-16 bg-card">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-12">Recommended Practice Platforms</h2>
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Recommended Practice Platforms</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {platforms.map((platform, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow bg-background border-border">
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow bg-gray-800/50 border-gray-700">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-primary mb-2">{platform.name}</h3>
-                  <p className="text-muted-foreground mb-3">{platform.description}</p>
+                  <h3 className="text-lg font-semibold text-blue-400 mb-2">{platform.name}</h3>
+                  <p className="text-gray-300 mb-3">{platform.description}</p>
                   <a 
                     href={platform.url} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-sm text-primary hover:underline"
+                    className="text-sm text-blue-400 hover:underline"
                   >
                     Visit Platform →
                   </a>
@@ -191,23 +195,23 @@ const FirstYear = () => {
       </section>
 
       {/* Sample Projects */}
-      <section className="py-16 cool-blue-gradient">
+      <section className="py-16 bg-gray-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Projects to Build</h2>
           <div className="max-w-4xl mx-auto">
-            <Card className="hover:shadow-lg transition-shadow bg-background border-border">
+            <Card className="hover:shadow-lg transition-shadow bg-gray-800/50 border-gray-700">
               <CardHeader>
-                <CardTitle className="text-2xl text-primary text-center">Beginner-Friendly Projects</CardTitle>
-                <p className="text-muted-foreground text-center">Start with these simple projects to apply what you learn</p>
+                <CardTitle className="text-2xl text-blue-400 text-center">Beginner-Friendly Projects</CardTitle>
+                <p className="text-gray-300 text-center">Start with these simple projects to apply what you learn</p>
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {projects.map((project, index) => (
-                    <div key={index} className="flex items-center p-4 bg-card rounded-lg border border-border">
-                      <span className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold mr-4">
+                    <div key={index} className="flex items-center p-4 bg-gray-700/50 rounded-lg border border-gray-600">
+                      <span className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-4">
                         {index + 1}
                       </span>
-                      <span className="text-foreground">{project}</span>
+                      <span className="text-gray-300">{project}</span>
                     </div>
                   ))}
                 </div>
@@ -218,9 +222,9 @@ const FirstYear = () => {
       </section>
 
       {/* What NOT to Miss */}
-      <section className="py-16 bg-card">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-12">What NOT to Miss in 1st Year</h2>
+          <h2 className="text-4xl font-bold text-center text-white mb-12">What NOT to Miss in 1st Year</h2>
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
@@ -249,10 +253,10 @@ const FirstYear = () => {
                   description: "Don't just learn syntax. Focus on solving problems and logical thinking."
                 }
               ].map((tip, index) => (
-                <Card key={index} className="border-l-4 border-l-primary hover:shadow-lg transition-shadow bg-background border-border">
+                <Card key={index} className="border-l-4 border-l-blue-500 hover:shadow-lg transition-shadow bg-gray-800/50 border-gray-700">
                   <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold text-foreground mb-2">{tip.title}</h3>
-                    <p className="text-muted-foreground">{tip.description}</p>
+                    <h3 className="text-lg font-semibold text-white mb-2">{tip.title}</h3>
+                    <p className="text-gray-300">{tip.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -262,10 +266,10 @@ const FirstYear = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 hero-gradient text-white">
+      <section className="py-16 bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready for 2nd Year?</h2>
-          <p className="text-xl mb-8 text-gray-100">
+          <p className="text-xl mb-8 text-blue-100">
             Once you're comfortable with programming basics and simple DSA, move to the next level!
           </p>
           <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg" asChild>

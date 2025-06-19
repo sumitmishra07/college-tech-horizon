@@ -3,8 +3,13 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ExternalLink } from "lucide-react";
+import { useEffect } from "react";
 
 const FourthYear = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const preparationTracks = [
     {
       title: "Placement Track",
@@ -50,7 +55,7 @@ const FourthYear = () => {
         { name: "Communication skills", url: "https://www.coursera.org/learn/wharton-communication-skills" },
         { name: "Problem-solving approach", url: "https://www.khanacademy.org/computing/computer-programming" },
         { name: "Leadership examples", url: "https://www.ted.com/topics/leadership" },
-        { name: "Team collaboration stories", url: "https://www.atlassian.com/team-playbook" },
+        { name: "Team collaboration", url: "https://www.atlassian.com/team-playbook" },
         { name: "Conflict resolution", url: "https://www.coursera.org/learn/conflict-resolution" },
         { name: "Adaptability examples", url: "https://hbr.org/topic/adaptability" }
       ]
@@ -90,15 +95,15 @@ const FourthYear = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="hero-gradient text-white py-16">
+      <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-5xl font-bold mb-4">4th Year - Career Preparation</h1>
-            <p className="text-xl mb-6 max-w-3xl mx-auto text-gray-100">
+            <h1 className="text-5xl font-bold mb-4 text-white">4th Year - Career Preparation</h1>
+            <p className="text-xl mb-6 max-w-3xl mx-auto text-blue-100">
               The final lap! Focus on placements, higher studies preparation, or launching your startup. This is where all your hard work pays off!
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -112,25 +117,25 @@ const FourthYear = () => {
       </section>
 
       {/* Choose Your Track */}
-      <section className="py-16 bg-card">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-12">Choose Your Career Track</h2>
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Choose Your Career Track</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {preparationTracks.map((track, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow bg-background border-border">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-gray-800/50 border-gray-700">
                 <CardHeader>
-                  <CardTitle className="text-xl text-primary">{track.title}</CardTitle>
-                  <p className="text-muted-foreground">{track.description}</p>
+                  <CardTitle className="text-xl text-blue-400">{track.title}</CardTitle>
+                  <p className="text-gray-300">{track.description}</p>
                   <span className="bg-orange-900 text-orange-100 px-3 py-1 rounded-full text-sm w-fit">
                     {track.timeline}
                   </span>
                 </CardHeader>
                 <CardContent>
-                  <h4 className="font-semibold text-foreground mb-2">Key Activities:</h4>
+                  <h4 className="font-semibold text-white mb-2">Key Activities:</h4>
                   <ul className="space-y-2">
                     {track.activities.map((activity, i) => (
-                      <li key={i} className="flex items-center text-muted-foreground">
-                        <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                      <li key={i} className="flex items-center text-gray-300">
+                        <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                         {activity}
                       </li>
                     ))}
@@ -143,25 +148,25 @@ const FourthYear = () => {
       </section>
 
       {/* Placement Preparation */}
-      <section className="py-16 cool-blue-gradient">
+      <section className="py-16 bg-gray-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Placement Preparation Checklist</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {placementPrep.map((category, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow bg-background border-border">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-gray-800/50 border-gray-700">
                 <CardHeader>
-                  <CardTitle className="text-xl text-primary">{category.category}</CardTitle>
+                  <CardTitle className="text-xl text-blue-400">{category.category}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
                     {category.items.map((item, i) => (
-                      <li key={i} className="flex items-start text-muted-foreground">
+                      <li key={i} className="flex items-start text-gray-300">
                         <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2"></span>
                         <a 
                           href={item.url} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="hover:text-primary transition-colors flex items-center gap-1"
+                          className="hover:text-blue-400 transition-colors flex items-center gap-1"
                         >
                           {item.name}
                           <ExternalLink className="w-3 h-3" />
@@ -177,20 +182,20 @@ const FourthYear = () => {
       </section>
 
       {/* Company Tiers */}
-      <section className="py-16 bg-card">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-foreground mb-12">Company Tiers & Expectations</h2>
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Company Tiers & Expectations</h2>
           <div className="space-y-6">
             {companies.map((tier, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow bg-background border-border">
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-gray-800/50 border-gray-700">
                 <CardContent className="p-6">
                   <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-primary mb-2">{tier.tier}</h3>
-                      <p className="text-muted-foreground mb-3">
+                      <h3 className="text-xl font-semibold text-blue-400 mb-2">{tier.tier}</h3>
+                      <p className="text-gray-300 mb-3">
                         <strong>Companies:</strong> {tier.companies.join(", ")}
                       </p>
-                      <p className="text-muted-foreground">
+                      <p className="text-gray-300">
                         <strong>Requirements:</strong> {tier.requirements.join(", ")}
                       </p>
                     </div>
@@ -207,203 +212,11 @@ const FourthYear = () => {
         </div>
       </section>
 
-      {/* Monthly Timeline */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">4th Year Timeline</h2>
-          <div className="max-w-4xl mx-auto">
-            <div className="space-y-6">
-              {[
-                {
-                  month: "July - August",
-                  title: "Preparation Phase",
-                  tasks: ["Resume building", "Portfolio optimization", "Skill assessment", "Mock interview practice"]
-                },
-                {
-                  month: "September - October",
-                  title: "Early Applications",
-                  tasks: ["Off-campus applications", "Startup applications", "Resume submissions", "Networking events"]
-                },
-                {
-                  month: "November - December",
-                  title: "Campus Placements Begin",
-                  tasks: ["Company registrations", "Pre-placement talks", "Online assessments", "Technical interviews"]
-                },
-                {
-                  month: "January - February",
-                  title: "Peak Placement Season",
-                  tasks: ["Multiple interviews", "Offer negotiations", "Decision making", "Backup plans"]
-                },
-                {
-                  month: "March - April",
-                  title: "Final Preparations",
-                  tasks: ["Project completion", "Thesis submission", "Final interviews", "Onboarding processes"]
-                },
-                {
-                  month: "May - June",
-                  title: "Graduation & Transition",
-                  tasks: ["Graduation ceremony", "Job onboarding", "Skill transition", "Alumni network"]
-                }
-              ].map((phase, index) => (
-                <Card key={index} className="border-l-4 border-l-orange-500">
-                  <CardContent className="p-6">
-                    <div className="flex items-start">
-                      <div className="bg-orange-500 text-white rounded-full w-12 h-12 flex items-center justify-center font-bold mr-4">
-                        {index + 1}
-                      </div>
-                      <div className="flex-1">
-                        <div className="flex items-center mb-2">
-                          <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium mr-4">
-                            {phase.month}
-                          </span>
-                          <h3 className="text-lg font-semibold text-gray-900">{phase.title}</h3>
-                        </div>
-                        <ul className="space-y-1 mt-3">
-                          {phase.tasks.map((task, i) => (
-                            <li key={i} className="flex items-center text-gray-600">
-                              <span className="w-1.5 h-1.5 bg-orange-500 rounded-full mr-2"></span>
-                              {task}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Resources */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Essential Resources</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                category: "Interview Preparation",
-                resources: [
-                  "LeetCode Premium",
-                  "InterviewBit",
-                  "Pramp (Mock interviews)",
-                  "Cracking the Coding Interview book"
-                ]
-              },
-              {
-                category: "System Design",
-                resources: [
-                  "Designing Data-Intensive Applications book",
-                  "System Design Primer (GitHub)",
-                  "Grokking the System Design Interview",
-                  "High Scalability blog"
-                ]
-              },
-              {
-                category: "Resume & Portfolio",
-                resources: [
-                  "Resume templates on Canva",
-                  "LinkedIn profile optimization",
-                  "GitHub portfolio enhancement",
-                  "Personal website/blog"
-                ]
-              },
-              {
-                category: "Higher Studies",
-                resources: [
-                  "GRE prep by Magoosh",
-                  "TOEFL/IELTS preparation",
-                  "University shortlisting tools",
-                  "SOP writing guides"
-                ]
-              },
-              {
-                category: "Salary Negotiation",
-                resources: [
-                  "PayScale salary data",
-                  "Glassdoor company reviews",
-                  "Levels.fyi compensation data",
-                  "Negotiation tactics courses"
-                ]
-              },
-              {
-                category: "Continuous Learning",
-                resources: [
-                  "Industry newsletters",
-                  "Tech podcasts",
-                  "Online certifications",
-                  "Professional communities"
-                ]
-              }
-            ].map((category, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <CardTitle className="text-lg text-primary">{category.category}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {category.resources.map((resource, i) => (
-                      <li key={i} className="flex items-center text-gray-700 text-sm">
-                        <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
-                        {resource}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Success Tips */}
-      <section className="py-16 bg-orange-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Final Year Success Tips</h2>
-          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              {
-                title: "Stay Consistent",
-                description: "Maintain regular study and practice schedule throughout the year."
-              },
-              {
-                title: "Apply Broadly",
-                description: "Don't put all eggs in one basket. Apply to multiple companies and opportunities."
-              },
-              {
-                title: "Network Actively",
-                description: "Connect with alumni, seniors, and industry professionals on LinkedIn."
-              },
-              {
-                title: "Practice Mock Interviews",
-                description: "Regular practice with peers and online platforms improves confidence."
-              },
-              {
-                title: "Stay Updated",
-                description: "Keep track of industry trends and company hiring patterns."
-              },
-              {
-                title: "Manage Stress",
-                description: "Maintain work-life balance and mental health during intense preparation."
-              }
-            ].map((tip, index) => (
-              <Card key={index} className="border-l-4 border-l-orange-500 hover:shadow-lg transition-shadow">
-                <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{tip.title}</h3>
-                  <p className="text-gray-600">{tip.description}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
-      <section className="py-16 hero-gradient text-white">
+      <section className="py-16 bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Land Your Dream Job?</h2>
-          <p className="text-xl mb-8 text-gray-100">
+          <p className="text-xl mb-8 text-blue-100">
             You've come so far! Now it's time to showcase your skills and land that perfect opportunity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -411,7 +224,7 @@ const FourthYear = () => {
               <a href="/resources">Browse Resources</a>
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg" asChild>
-              <a href="/blog">Read Success Stories</a>
+              <a href="/blog">Read Blog Posts</a>
             </Button>
           </div>
         </div>
