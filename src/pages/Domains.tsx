@@ -26,7 +26,8 @@ const Domains = () => {
       skills: ["HTML/CSS", "JavaScript", "React", "Node.js", "MongoDB", "PostgreSQL", "AWS", "Docker"],
       avgSalary: "₹12-40 LPA",
       jobRoles: ["Full Stack Developer", "Frontend Developer", "Backend Developer", "DevOps Engineer", "Web Architect"],
-      color: "bg-green-500"
+      color: "bg-green-500",
+      roadmapUrl: "/webdev-roadmap"
     },
     {
       title: "Machine Learning & AI",
@@ -34,7 +35,8 @@ const Domains = () => {
       skills: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "Statistics", "Data Analysis", "Deep Learning", "NLP"],
       avgSalary: "₹18-60 LPA",
       jobRoles: ["ML Engineer", "Data Scientist", "AI Researcher", "Data Analyst", "AI Product Manager"],
-      color: "bg-purple-500"
+      color: "bg-purple-500",
+      roadmapUrl: "/ml-roadmap"
     },
     {
       title: "Mobile App Development",
@@ -42,7 +44,8 @@ const Domains = () => {
       skills: ["React Native", "Flutter", "Kotlin", "Swift", "Firebase", "UI/UX Design", "App Store Optimization"],
       avgSalary: "₹10-35 LPA",
       jobRoles: ["Mobile Developer", "iOS Developer", "Android Developer", "Cross-platform Developer", "Mobile Architect"],
-      color: "bg-pink-500"
+      color: "bg-pink-500",
+      roadmapUrl: "/mobile-roadmap"
     },
     {
       title: "Cybersecurity",
@@ -50,7 +53,8 @@ const Domains = () => {
       skills: ["Network Security", "Penetration Testing", "Cryptography", "Linux", "OWASP", "Incident Response", "Ethical Hacking"],
       avgSalary: "₹15-45 LPA",
       jobRoles: ["Security Engineer", "Penetration Tester", "Security Analyst", "Cybersecurity Consultant", "CISO"],
-      color: "bg-red-500"
+      color: "bg-red-500",
+      roadmapUrl: "/cybersecurity-roadmap"
     },
     {
       title: "Cloud & DevOps",
@@ -58,7 +62,8 @@ const Domains = () => {
       skills: ["AWS/Azure/GCP", "Docker", "Kubernetes", "CI/CD", "Infrastructure as Code", "Monitoring", "Linux"],
       avgSalary: "₹14-50 LPA",
       jobRoles: ["DevOps Engineer", "Cloud Architect", "Site Reliability Engineer", "Platform Engineer", "Infrastructure Engineer"],
-      color: "bg-indigo-500"
+      color: "bg-indigo-500",
+      roadmapUrl: "/cloud-devops-roadmap"
     },
     {
       title: "Blockchain Development",
@@ -66,7 +71,8 @@ const Domains = () => {
       skills: ["Solidity", "Web3.js", "Ethereum", "Smart Contracts", "DeFi", "Cryptocurrency", "Rust", "Go"],
       avgSalary: "₹20-80 LPA",
       jobRoles: ["Blockchain Developer", "Smart Contract Developer", "DeFi Engineer", "Web3 Developer", "Blockchain Architect"],
-      color: "bg-yellow-500"
+      color: "bg-yellow-500",
+      roadmapUrl: "/blockchain-roadmap"
     },
     {
       title: "Game Development",
@@ -74,7 +80,8 @@ const Domains = () => {
       skills: ["Unity", "Unreal Engine", "C#", "C++", "Game Design", "3D Modeling", "Animation", "Physics"],
       avgSalary: "₹8-30 LPA",
       jobRoles: ["Game Developer", "Game Designer", "Unity Developer", "Gameplay Programmer", "Technical Artist"],
-      color: "bg-orange-500"
+      color: "bg-orange-500",
+      roadmapUrl: "/gamedev-roadmap"
     },
     {
       title: "UI/UX Design",
@@ -82,7 +89,8 @@ const Domains = () => {
       skills: ["Figma", "Adobe XD", "Sketch", "Prototyping", "User Research", "Design Systems", "Accessibility", "Psychology"],
       avgSalary: "₹10-35 LPA",
       jobRoles: ["UI Designer", "UX Designer", "Product Designer", "Design Lead", "UX Researcher"],
-      color: "bg-teal-500"
+      color: "bg-teal-500",
+      roadmapUrl: "/uiux-roadmap"
     }
   ];
 
