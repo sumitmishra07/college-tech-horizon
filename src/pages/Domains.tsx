@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import DomainCard from "@/components/DomainCard";
@@ -153,10 +154,199 @@ const Domains = () => {
         </div>
       </section>
 
+      {/* T-Shaped Approach Section */}
+      <section className="py-16 bg-gradient-to-br from-gray-800 via-blue-800 to-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-white mb-12">The T-Shaped Developer Approach</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <Card className="bg-gray-800/50 border-gray-700 hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-blue-400">What is T-Shaped Skills?</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300 mb-4">
+                    The T-shaped approach means having deep expertise in one domain (the vertical line of the T) 
+                    while maintaining broad knowledge across multiple areas (the horizontal line).
+                  </p>
+                  <ul className="space-y-3 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                      <strong className="text-white">Deep Knowledge:</strong> Master one primary domain thoroughly
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                      <strong className="text-white">Broad Understanding:</strong> Learn basics of complementary domains
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 mt-2"></span>
+                      <strong className="text-white">Cross-functional Skills:</strong> Communicate effectively across teams
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+            <div>
+              <Card className="bg-gray-800/50 border-gray-700 hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <CardTitle className="text-2xl text-green-400">Benefits of T-Shaped Skills</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-4 text-gray-300">
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></span>
+                      <div>
+                        <strong className="text-white block">Higher Employability:</strong>
+                        Companies prefer versatile developers who can adapt
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></span>
+                      <div>
+                        <strong className="text-white block">Better Problem Solving:</strong>
+                        Draw solutions from multiple domains
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></span>
+                      <div>
+                        <strong className="text-white block">Career Growth:</strong>
+                        Progress to leadership and architect roles
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-green-500 rounded-full mr-3 mt-2"></span>
+                      <div>
+                        <strong className="text-white block">Innovation:</strong>
+                        Create solutions by combining different technologies
+                      </div>
+                    </li>
+                  </ul>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How to Choose Your Domain Section */}
+      <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-white mb-12">How to Choose Your Domain Correctly</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="bg-gray-800/50 border-gray-700 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl text-purple-400">1. Assess Your Interests</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2"></span>
+                    What problems excite you to solve?
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2"></span>
+                    Do you prefer visual design or logical thinking?
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2"></span>
+                    Are you interested in business or technical challenges?
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full mr-3 mt-2"></span>
+                    Try small projects in different domains
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-800/50 border-gray-700 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl text-orange-400">2. Evaluate Market Demand</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></span>
+                    Research job openings in your area
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></span>
+                    Check salary ranges and growth trends
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></span>
+                    Look at future technology trends
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-orange-500 rounded-full mr-3 mt-2"></span>
+                    Consider remote work opportunities
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-gray-800/50 border-gray-700 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-xl text-teal-400">3. Consider Your Strengths</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-3 text-gray-300">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-teal-500 rounded-full mr-3 mt-2"></span>
+                    Are you good at mathematics and logic?
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-teal-500 rounded-full mr-3 mt-2"></span>
+                    Do you have strong communication skills?
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-teal-500 rounded-full mr-3 mt-2"></span>
+                    Are you detail-oriented or big-picture focused?
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-teal-500 rounded-full mr-3 mt-2"></span>
+                    Take online assessments and get feedback
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12">
+            <Card className="bg-gray-800/50 border-gray-700 hover:shadow-lg transition-shadow">
+              <CardHeader>
+                <CardTitle className="text-2xl text-blue-400 text-center">Decision Framework</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
+                  <div className="p-4 bg-blue-600/20 rounded-lg">
+                    <h4 className="font-semibold text-blue-300 mb-2">Step 1</h4>
+                    <p className="text-gray-300 text-sm">List 3-5 domains that interest you most</p>
+                  </div>
+                  <div className="p-4 bg-green-600/20 rounded-lg">
+                    <h4 className="font-semibold text-green-300 mb-2">Step 2</h4>
+                    <p className="text-gray-300 text-sm">Research job market and salary for each</p>
+                  </div>
+                  <div className="p-4 bg-purple-600/20 rounded-lg">
+                    <h4 className="font-semibold text-purple-300 mb-2">Step 3</h4>
+                    <p className="text-gray-300 text-sm">Try hands-on projects in top 2-3 choices</p>
+                  </div>
+                  <div className="p-4 bg-orange-600/20 rounded-lg">
+                    <h4 className="font-semibold text-orange-300 mb-2">Step 4</h4>
+                    <p className="text-gray-300 text-sm">Choose primary domain and start deep learning</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Comparison Table */}
       <section className="py-16 bg-gradient-to-br from-gray-800 via-blue-800 to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-white mb-12">Comparison Table</h2>
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Learning Path Comparison</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="bg-gray-800/50 border-gray-700 hover:shadow-lg transition-shadow">
               <CardHeader>
