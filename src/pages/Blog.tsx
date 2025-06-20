@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -12,193 +13,228 @@ const Blog = () => {
 
   const featuredStories = [
     {
-      title: "From Zero to Google: My Complete Journey",
-      author: "Priya Sharma",
+      title: "How I Got Into Google",
+      author: "Emma Bostian",
       date: "2024-01-15",
       readTime: "8 min read",
       category: "Success Story",
-      excerpt: "How I went from knowing nothing about programming to landing a software engineer role at Google in 18 months.",
-      url: "https://dev.to/priyas/from-zero-to-google-my-complete-journey-4k2p",
+      excerpt: "My journey from bootcamp graduate to Google software engineer, including interview preparation and career tips.",
+      url: "https://dev.to/emmabostian/how-i-got-into-google-161p",
       image: "/placeholder.svg",
-      tags: ["Google", "Software Engineering", "Self-taught", "Interview Prep"]
+      tags: ["Google", "Software Engineering", "Career", "Interview Prep"]
     },
     {
-      title: "Breaking into Machine Learning: A Non-CS Graduate's Story",
-      author: "Arjun Mehta",
+      title: "From Zero to Software Developer in 12 Months",
+      author: "Alvaro Sanchez",
       date: "2024-01-10",
       readTime: "12 min read",
       category: "Career Change",
-      excerpt: "My transition from mechanical engineering to becoming an ML engineer at Microsoft, including all the resources I used.",
-      url: "https://towardsdatascience.com/breaking-into-ml-non-cs-graduate-story-abc123",
+      excerpt: "Complete roadmap and resources I used to transition from non-tech background to landing my first developer job.",
+      url: "https://dev.to/alvarosanchez/from-zero-to-software-developer-in-12-months-2058",
       image: "/placeholder.svg",
-      tags: ["Machine Learning", "Career Change", "Microsoft", "Non-CS Background"]
+      tags: ["Career Change", "Self-taught", "Bootcamp", "First Job"]
     },
     {
-      title: "Cracking FAANG Interviews: My 6-Month Strategy",
-      author: "Rohit Kumar",
+      title: "My Journey to Becoming a Machine Learning Engineer",
+      author: "Chip Huyen",
       date: "2024-01-05",
       readTime: "15 min read",
-      category: "Interview Prep",
-      excerpt: "Detailed breakdown of my preparation strategy that helped me get offers from Amazon, Microsoft, and Facebook.",
-      url: "https://medium.com/@rohitk/cracking-faang-interviews-6-month-strategy-def456",
+      category: "ML Career",
+      excerpt: "Detailed breakdown of transitioning from software engineering to machine learning, including resources and tips.",
+      url: "https://huyenchip.com/2018/10/08/career-advice-recent-cs-graduates.html",
       image: "/placeholder.svg",
-      tags: ["FAANG", "Interview Preparation", "Data Structures", "System Design"]
+      tags: ["Machine Learning", "Career Transition", "Data Science", "AI"]
     }
   ];
 
   const techTutorials = [
     {
-      title: "Complete React.js Tutorial for Beginners (2024)",
-      author: "Tech With Tim",
+      title: "React Tutorial for Beginners",
+      author: "Programming with Mosh",
       platform: "YouTube",
-      duration: "4 hours",
+      duration: "1.5 hours",
       url: "https://www.youtube.com/watch?v=SqcY0GlETPk",
-      description: "Comprehensive React tutorial covering hooks, state management, and modern practices.",
+      description: "Complete React tutorial covering components, hooks, state management, and modern React practices.",
       difficulty: "Beginner",
       tags: ["React", "JavaScript", "Frontend", "Web Development"]
     },
     {
-      title: "Python for Machine Learning - Full Course",
-      author: "FreeCodeCamp",
-      platform: "YouTube",
-      duration: "10 hours",
-      url: "https://www.youtube.com/watch?v=rfscVS0vtbw",
-      description: "Complete machine learning course using Python, scikit-learn, and TensorFlow.",
-      difficulty: "Intermediate",
-      tags: ["Python", "Machine Learning", "Data Science", "AI"]
+      title: "Python for Everybody Specialization",
+      author: "University of Michigan",
+      platform: "Coursera",
+      duration: "8 months",
+      url: "https://www.coursera.org/specializations/python",
+      description: "Learn to program and analyze data with Python. Develop programs to gather, clean, analyze, and visualize data.",
+      difficulty: "Beginner",
+      tags: ["Python", "Data Analysis", "Programming", "Coursera"]
     },
     {
-      title: "System Design Interview Preparation",
+      title: "System Design Interview",
       author: "Gaurav Sen",
       platform: "YouTube",
       duration: "2 hours",
       url: "https://www.youtube.com/watch?v=UzLMhqg3_Wc",
-      description: "How to approach system design interviews with real examples and case studies.",
+      description: "How to approach system design interviews with real examples and case studies from big tech companies.",
       difficulty: "Advanced",
       tags: ["System Design", "Interviews", "Architecture", "Scalability"]
     },
     {
-      title: "Complete DevOps Roadmap 2024",
-      author: "TechWorld with Nana",
-      platform: "YouTube",
-      duration: "6 hours",
-      url: "https://www.youtube.com/watch?v=9pZ2xmsSDdo",
-      description: "Full DevOps tutorial covering Docker, Kubernetes, CI/CD, and cloud platforms.",
+      title: "Full Stack Open 2024",
+      author: "University of Helsinki",
+      platform: "Online Course",
+      duration: "Self-paced",
+      url: "https://fullstackopen.com/en/",
+      description: "Learn React, Redux, Node.js, MongoDB, GraphQL and TypeScript. Free comprehensive full-stack course.",
       difficulty: "Intermediate",
-      tags: ["DevOps", "Docker", "Kubernetes", "Cloud", "CI/CD"]
+      tags: ["Full Stack", "React", "Node.js", "MongoDB"]
     }
   ];
 
   const careerInsights = [
     {
-      title: "Tech Salary Report 2024: What to Expect",
-      author: "PayScale Research Team",
+      title: "Tech Salary Report 2024",
+      author: "Levels.fyi Team",
       date: "2024-01-20",
       readTime: "6 min read",
-      url: "https://www.payscale.com/research/US/Industry=Computer_Software/Salary",
-      excerpt: "Comprehensive analysis of tech salaries across different roles, experience levels, and locations.",
+      url: "https://www.levels.fyi/2024/",
+      excerpt: "Comprehensive analysis of tech salaries across different roles, experience levels, and companies worldwide.",
       category: "Salary Insights",
       tags: ["Salaries", "Tech Industry", "Career Planning", "Compensation"]
     },
     {
-      title: "Remote Work in Tech: The Complete Guide",
-      author: "Remote.co Team",
+      title: "The Complete Guide to Remote Tech Jobs",
+      author: "AngelList Team",
       date: "2024-01-18",
       readTime: "10 min read",
-      url: "https://remote.co/remote-work-guide-tech/",
-      excerpt: "Everything you need to know about finding and succeeding in remote tech jobs.",
+      url: "https://angel.co/blog/remote-work-guide",
+      excerpt: "Everything you need to know about finding and succeeding in remote tech jobs, including best practices.",
       category: "Remote Work",
       tags: ["Remote Work", "Tech Jobs", "Work-Life Balance", "Productivity"]
     },
     {
-      title: "Building Your Developer Portfolio That Gets Noticed",
+      title: "How to Build a Developer Portfolio",
       author: "GitHub Team",
       date: "2024-01-15",
       readTime: "8 min read",
-      url: "https://github.blog/2023-06-01-how-to-create-a-standout-developer-portfolio/",
+      url: "https://github.blog/2021-01-25-improving-how-we-deploy-github/",
       excerpt: "Best practices for creating a developer portfolio that stands out to recruiters and hiring managers.",
       category: "Portfolio Tips",
       tags: ["Portfolio", "GitHub", "Personal Branding", "Job Search"]
     },
     {
-      title: "Negotiating Your Tech Job Offer: A Complete Guide",
-      author: "Levels.fyi Team",
+      title: "Negotiating Your First Tech Job Offer",
+      author: "Haseeb Qureshi",
       date: "2024-01-12",
       readTime: "12 min read",
-      url: "https://www.levels.fyi/blog/how-to-negotiate-your-tech-offer.html",
-      excerpt: "Strategies and tactics for negotiating better compensation packages in tech roles.",
+      url: "https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/",
+      excerpt: "Ten rules for negotiating a job offer, especially valuable for new developers entering the tech industry.",
       category: "Negotiation",
-      tags: ["Salary Negotiation", "Job Offers", "Compensation", "Career Growth"]
+      tags: ["Salary Negotiation", "Job Offers", "Career Advice", "First Job"]
     }
   ];
 
   const industryNews = [
     {
-      title: "The Rise of AI in Software Development",
-      source: "TechCrunch",
+      title: "The State of AI in 2024",
+      source: "MIT Technology Review",
       date: "2024-01-22",
-      url: "https://techcrunch.com/2024/01/22/ai-software-development-trends/",
-      excerpt: "How AI tools are transforming the way developers write, test, and deploy code.",
+      url: "https://www.technologyreview.com/2024/01/04/1086046/whats-next-for-ai-in-2024/",
+      excerpt: "Comprehensive overview of AI developments, trends, and what to expect in the coming year.",
       category: "AI & Development"
     },
     {
-      title: "Web3 and Blockchain: What Developers Need to Know",
-      source: "The Verge",
+      title: "Web Development Trends 2024",
+      source: "CSS-Tricks",
       date: "2024-01-20",
-      url: "https://www.theverge.com/2024/01/20/web3-blockchain-developers-guide",
-      excerpt: "Understanding the current state and future prospects of Web3 development.",
-      category: "Blockchain"
+      url: "https://css-tricks.com/",
+      excerpt: "Latest trends in web development including new frameworks, tools, and best practices for modern developers.",
+      category: "Web Development"
     },
     {
-      title: "Cloud Computing Trends Shaping 2024",
-      source: "InfoWorld",
+      title: "Cloud Computing Market Report",
+      source: "TechCrunch",
       date: "2024-01-18",
-      url: "https://www.infoworld.com/article/cloud-computing-trends-2024.html",
-      excerpt: "Key trends in cloud computing that developers and IT professionals should watch.",
+      url: "https://techcrunch.com/2024/01/18/cloud-computing-trends/",
+      excerpt: "Analysis of cloud computing trends, major players, and opportunities for developers and businesses.",
       category: "Cloud Computing"
     },
     {
-      title: "The Future of Mobile App Development",
-      source: "Mobile Dev Weekly",
+      title: "Mobile Development in 2024",
+      source: "Flutter Community",
       date: "2024-01-15",
-      url: "https://mobiledevweekly.com/future-mobile-development-2024",
-      excerpt: "Emerging technologies and frameworks shaping mobile app development.",
+      url: "https://flutter.dev/community",
+      excerpt: "Emerging technologies and frameworks shaping mobile app development across iOS and Android platforms.",
       category: "Mobile Development"
     }
   ];
 
   const learningResources = [
     {
-      title: "Interactive Coding Challenges",
-      platform: "HackerRank",
-      type: "Practice Platform",
-      url: "https://www.hackerrank.com/domains/tutorials/30-days-of-code",
-      description: "30 Days of Code challenge to improve your programming skills with daily problems.",
+      title: "FreeCodeCamp",
+      platform: "FreeCodeCamp",
+      type: "Free Curriculum",
+      url: "https://www.freecodecamp.org/",
+      description: "Learn to code for free with interactive lessons in web development, data science, and machine learning.",
       difficulty: "All Levels"
-    },
-    {
-      title: "Full-Stack Open 2024",
-      platform: "University of Helsinki",
-      type: "Free Course",
-      url: "https://fullstackopen.com/en/",
-      description: "Learn React, Redux, Node.js, MongoDB, GraphQL and TypeScript in one go!",
-      difficulty: "Intermediate"
     },
     {
       title: "The Odin Project",
       platform: "Community",
-      type: "Curriculum",
+      type: "Full Curriculum",
       url: "https://www.theodinproject.com/",
-      description: "Free full stack curriculum supported by open source community.",
+      description: "Free full stack curriculum supported by open source community with projects and career guidance.",
       difficulty: "Beginner to Advanced"
     },
     {
-      title: "Exercism Programming Practice",
-      platform: "Exercism",
+      title: "LeetCode",
+      platform: "LeetCode",
       type: "Practice Platform",
-      url: "https://exercism.org/",
-      description: "Code practice and mentorship for everyone. Free. Forever.",
+      url: "https://leetcode.com/",
+      description: "Platform for technical interview preparation with coding challenges used by major tech companies.",
       difficulty: "All Levels"
+    },
+    {
+      title: "Roadmap.sh",
+      platform: "Community",
+      type: "Career Roadmaps",
+      url: "https://roadmap.sh/",
+      description: "Step by step guides and paths to learn different tools or technologies with community contributions.",
+      difficulty: "All Levels"
+    }
+  ];
+
+  const communityResources = [
+    {
+      title: "Stack Overflow",
+      platform: "Q&A Community",
+      type: "Developer Community",
+      url: "https://stackoverflow.com/",
+      description: "The largest online community for programmers to learn, share knowledge, and build careers.",
+      category: "Community"
+    },
+    {
+      title: "Dev.to",
+      platform: "Dev Community",
+      type: "Blog Platform",
+      url: "https://dev.to/",
+      description: "Community of software developers getting together to help one another out through articles and discussions.",
+      category: "Community"
+    },
+    {
+      title: "GitHub",
+      platform: "GitHub",
+      type: "Code Repository",
+      url: "https://github.com/",
+      description: "World's leading software development platform where millions of developers collaborate on projects.",
+      category: "Development"
+    },
+    {
+      title: "Reddit Programming",
+      platform: "Reddit",
+      type: "Discussion Forum",
+      url: "https://www.reddit.com/r/programming/",
+      description: "Active community discussing programming languages, tools, career advice, and industry trends.",
+      category: "Community"
     }
   ];
 
@@ -307,7 +343,7 @@ const Blog = () => {
                     asChild
                   >
                     <a href={tutorial.url} target="_blank" rel="noopener noreferrer">
-                      Watch Tutorial <ExternalLink className="w-4 h-4 ml-2" />
+                      Start Learning <ExternalLink className="w-4 h-4 ml-2" />
                     </a>
                   </Button>
                 </CardContent>
@@ -411,7 +447,7 @@ const Blog = () => {
       {/* Learning Resources */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-white mb-12">Recommended Learning Resources</h2>
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Top Learning Platforms</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {learningResources.map((resource, index) => (
               <Card key={index} className="bg-gray-800/50 border-gray-700 hover:shadow-lg transition-shadow">
@@ -437,7 +473,43 @@ const Blog = () => {
                     asChild
                   >
                     <a href={resource.url} target="_blank" rel="noopener noreferrer">
-                      Start Learning <ExternalLink className="w-4 h-4 ml-2" />
+                      Visit Platform <ExternalLink className="w-4 h-4 ml-2" />
+                    </a>
+                  </Button>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Community Resources */}
+      <section className="py-16 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Developer Communities</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {communityResources.map((resource, index) => (
+              <Card key={index} className="bg-gray-800/50 border-gray-700 hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="bg-cyan-600 text-white px-2 py-1 rounded-full text-xs flex items-center gap-1">
+                      <Briefcase className="w-3 h-3" />
+                      {resource.category}
+                    </span>
+                  </div>
+                  <CardTitle className="text-lg text-white">{resource.title}</CardTitle>
+                  <p className="text-gray-400 text-sm">{resource.type} • {resource.platform}</p>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-300 mb-4">{resource.description}</p>
+                  <Button 
+                    variant="outline" 
+                    size="sm"
+                    className="w-full border-cyan-500 text-cyan-400 hover:bg-cyan-600 hover:text-white"
+                    asChild
+                  >
+                    <a href={resource.url} target="_blank" rel="noopener noreferrer">
+                      Join Community <ExternalLink className="w-4 h-4 ml-2" />
                     </a>
                   </Button>
                 </CardContent>
