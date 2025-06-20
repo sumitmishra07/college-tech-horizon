@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -119,20 +120,21 @@ const FirstYear = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold mb-4 text-white">1st Year - Foundation Phase</h1>
-            <p className="text-xl mb-6 max-w-3xl mx-auto text-blue-100">
-              Build strong programming fundamentals and start your coding journey. This year is all about learning the basics right!
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Programming</span>
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Basic DSA</span>
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Git & GitHub</span>
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">CS Fundamentals</span>
-            </div>
+      {/* Hero Section - Matching home page style */}
+      <section className="relative hero-gradient text-white py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+            1st Year - Foundation Phase
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto">
+            Build strong programming fundamentals and start your coding journey. This year is all about learning the basics right!
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Programming</span>
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Basic DSA</span>
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Git & GitHub</span>
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">CS Fundamentals</span>
           </div>
         </div>
       </section>
@@ -326,7 +328,7 @@ const FirstYear = () => {
           <p className="text-xl mb-8 text-blue-100">
             Once you're comfortable with programming basics and simple DSA, move to the next level!
           </p>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg" asChild>
+          <Button size="lg" variant="outline" className="border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-gray-900 px-8 py-4 text-lg" asChild>
             <a href="/second-year">Explore 2nd Year Guide</a>
           </Button>
         </div>

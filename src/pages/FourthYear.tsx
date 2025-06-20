@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -179,26 +178,27 @@ const FourthYear = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold mb-4 text-white">4th Year - Career Preparation</h1>
-            <p className="text-xl mb-6 max-w-3xl mx-auto text-blue-100">
-              The final lap! Focus on placements, higher studies preparation, or launching your startup. This is where all your hard work pays off!
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Placement Prep</span>
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">System Design</span>
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Mock Interviews</span>
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Higher Studies</span>
-            </div>
+      {/* Hero Section - Matching home page style */}
+      <section className="relative hero-gradient text-white py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+            4th Year - Career Preparation
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto">
+            The final lap! Focus on placements, higher studies preparation, or launching your startup. This is where all your hard work pays off!
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Placement Prep</span>
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">System Design</span>
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Mock Interviews</span>
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Higher Studies</span>
           </div>
         </div>
       </section>
 
       {/* Choose Your Track */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Choose Your Career Track</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -229,7 +229,7 @@ const FourthYear = () => {
       </section>
 
       {/* YouTube Channels */}
-      <section className="py-16 bg-gray-800/30">
+      <section className="py-16 bg-gradient-to-br from-gray-800 via-blue-800 to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Placement Focused YouTube Channels</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -255,7 +255,7 @@ const FourthYear = () => {
       </section>
 
       {/* Monthly Preparation Plan */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Month-wise Preparation Plan</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -281,8 +281,8 @@ const FourthYear = () => {
         </div>
       </section>
 
-      {/* Placement Preparation Resources */}
-      <section className="py-16 bg-gray-800/30">
+      {/* Essential Resources */}
+      <section className="py-16 bg-gradient-to-br from-gray-800 via-blue-800 to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Essential Resources</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -316,7 +316,7 @@ const FourthYear = () => {
       </section>
 
       {/* Placement Preparation Checklist */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Placement Preparation Checklist</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -350,7 +350,7 @@ const FourthYear = () => {
       </section>
 
       {/* Company Tiers */}
-      <section className="py-16 bg-gray-800/30">
+      <section className="py-16 bg-gradient-to-br from-gray-800 via-blue-800 to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Company Tiers & Expectations</h2>
           <div className="space-y-6">
@@ -388,10 +388,10 @@ const FourthYear = () => {
             You've come so far! Now it's time to showcase your skills and land that perfect opportunity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg" asChild>
+            <Button size="lg" variant="outline" className="border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-gray-900 px-8 py-4 text-lg" asChild>
               <a href="/resources">Browse Resources</a>
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg" asChild>
+            <Button size="lg" variant="outline" className="border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-gray-900 px-8 py-4 text-lg" asChild>
               <a href="/blog">Read Blog Posts</a>
             </Button>
           </div>

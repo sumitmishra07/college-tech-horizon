@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -140,26 +139,27 @@ const ThirdYear = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold mb-4 text-white">3rd Year - Specialization Phase</h1>
-            <p className="text-xl mb-6 max-w-3xl mx-auto text-blue-100">
-              Choose your domain, contribute to open source, and build advanced projects. This year is about specialization and real-world experience.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Domain Selection</span>
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Open Source</span>
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Advanced Projects</span>
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Internships</span>
-            </div>
+      {/* Hero Section - Matching home page style */}
+      <section className="relative hero-gradient text-white py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+            3rd Year - Specialization Phase
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto">
+            Choose your domain, contribute to open source, and build advanced projects. This year is about specialization and real-world experience.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Domain Selection</span>
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Open Source</span>
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Advanced Projects</span>
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Internships</span>
           </div>
         </div>
       </section>
 
       {/* Key Focus Areas */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Key Focus Areas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -186,7 +186,7 @@ const ThirdYear = () => {
       </section>
 
       {/* YouTube Channels */}
-      <section className="py-16 bg-gray-800/30">
+      <section className="py-16 bg-gradient-to-br from-gray-800 via-blue-800 to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Career-Focused YouTube Channels</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -212,7 +212,7 @@ const ThirdYear = () => {
       </section>
 
       {/* Learning Resources */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Specialized Learning Resources</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -245,7 +245,7 @@ const ThirdYear = () => {
       </section>
 
       {/* Open Source Guide */}
-      <section className="py-16 bg-gray-800/30">
+      <section className="py-16 bg-gradient-to-br from-gray-800 via-blue-800 to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Open Source Contribution Guide</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -272,7 +272,7 @@ const ThirdYear = () => {
       </section>
 
       {/* Internship Preparation */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Internship Preparation Tips</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -305,7 +305,7 @@ const ThirdYear = () => {
           <p className="text-xl mb-8 text-blue-100">
             Time to prepare for placements and plan your career path. The final push towards your dream job!
           </p>
-          <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg" asChild>
+          <Button size="lg" variant="outline" className="border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-gray-900 px-8 py-4 text-lg" asChild>
             <a href="/fourth-year">Explore 4th Year Guide</a>
           </Button>
         </div>

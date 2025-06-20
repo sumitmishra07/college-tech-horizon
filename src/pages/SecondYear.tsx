@@ -133,20 +133,21 @@ const SecondYear = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-5xl font-bold mb-4 text-white">2nd Year - Development Phase</h1>
-            <p className="text-xl mb-6 max-w-3xl mx-auto text-blue-100">
-              Master advanced algorithms and start building real-world projects. This year combines theory with practical development skills.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Advanced DSA</span>
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Web Development</span>
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Projects</span>
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Database</span>
-            </div>
+      {/* Hero Section - Matching home page style */}
+      <section className="relative hero-gradient text-white py-20">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in">
+            2nd Year - Development Phase
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto">
+            Master advanced algorithms and start building real-world projects. This year combines theory with practical development skills.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Advanced DSA</span>
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Web Development</span>
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Projects</span>
+            <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Database</span>
           </div>
         </div>
       </section>
@@ -295,7 +296,7 @@ const SecondYear = () => {
           <p className="text-xl mb-8 text-blue-100">
             Once you've mastered development basics, it's time to specialize and contribute to open source!
           </p>
-          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg" asChild>
+          <Button size="lg" variant="outline" className="border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-gray-900 px-8 py-4 text-lg" asChild>
             <a href="/third-year">Explore 3rd Year Guide</a>
           </Button>
         </div>
