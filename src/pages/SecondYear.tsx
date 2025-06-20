@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -153,12 +152,12 @@ const SecondYear = () => {
       </section>
 
       {/* Key Focus Areas */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Key Focus Areas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {focusAreas.map((area, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow bg-gray-800/50 border-gray-700">
+              <Card key={index} className="hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 transform hover:-translate-y-2 bg-gray-800/60 backdrop-blur-sm border-gray-700">
                 <CardHeader>
                   <CardTitle className="text-xl text-blue-400">{area.title}</CardTitle>
                   <p className="text-gray-300">{area.description}</p>
@@ -180,12 +179,12 @@ const SecondYear = () => {
       </section>
 
       {/* YouTube Channels */}
-      <section className="py-16 bg-gray-800/30">
+      <section className="py-16 bg-gradient-to-br from-gray-800 via-blue-800 to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Popular YouTube Channels</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {youtubeChannels.map((channel, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow bg-gray-800/50 border-gray-700">
+              <Card key={index} className="text-center hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-500 transform hover:-translate-y-2 bg-gray-800/60 backdrop-blur-sm border-gray-700">
                 <CardContent className="p-6">
                   <h3 className="text-lg font-semibold text-blue-400 mb-2">{channel.name}</h3>
                   <p className="text-gray-300 mb-2 text-sm">{channel.description}</p>
@@ -206,7 +205,7 @@ const SecondYear = () => {
       </section>
 
       {/* Learning Resources */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Learning Resources</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -239,7 +238,7 @@ const SecondYear = () => {
       </section>
 
       {/* Practice Platforms */}
-      <section className="py-16 bg-gray-800/30">
+      <section className="py-16 bg-gradient-to-br from-gray-800 via-blue-800 to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Advanced Practice Platforms</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -264,7 +263,7 @@ const SecondYear = () => {
       </section>
 
       {/* Project Ideas */}
-      <section className="py-16">
+      <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Project Ideas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -296,7 +295,7 @@ const SecondYear = () => {
           <p className="text-xl mb-8 text-blue-100">
             Once you've mastered development basics, it's time to specialize and contribute to open source!
           </p>
-          <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg" asChild>
+          <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg" asChild>
             <a href="/third-year">Explore 3rd Year Guide</a>
           </Button>
         </div>

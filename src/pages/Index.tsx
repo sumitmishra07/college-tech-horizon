@@ -78,7 +78,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
       <Navigation />
       
       {/* Hero Section */}
@@ -94,7 +94,7 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/first-year">
-              <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white font-semibold px-8 py-4 text-lg">
+              <Button size="lg" variant="outline" className="border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-gray-900 font-semibold px-8 py-4 text-lg">
                 Start Your Journey
               </Button>
             </Link>
@@ -108,11 +108,11 @@ const Index = () => {
       </section>
 
       {/* Year-wise Guide Section */}
-      <section className="py-16 bg-card">
+      <section className="py-16 bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Year-wise Learning Path</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-white mb-4">Year-wise Learning Path</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Follow our structured approach to make the most of your B.Tech years. Each year builds upon the previous one.
             </p>
           </div>
@@ -126,7 +126,7 @@ const Index = () => {
       </section>
 
       {/* Popular Domains Section */}
-      <section className="py-16 cool-blue-gradient">
+      <section className="py-16 bg-gradient-to-br from-gray-800 via-blue-800 to-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">Popular Tech Domains</h2>
@@ -143,7 +143,7 @@ const Index = () => {
           
           <div className="text-center">
             <Link to="/domains">
-              <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white">
+              <Button size="lg" variant="outline" className="border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-gray-900">
                 View All Domains
               </Button>
             </Link>
@@ -152,7 +152,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 hero-gradient text-white">
+      <section className="py-16 bg-gradient-to-r from-blue-900 via-blue-800 to-indigo-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-4">Ready to Start Your Tech Journey?</h2>
           <p className="text-xl mb-8">
@@ -160,7 +160,7 @@ const Index = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/first-year">
-              <Button size="lg" className="bg-blue-500 hover:bg-blue-600 text-white px-8 py-4 text-lg">
+              <Button size="lg" variant="outline" className="border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-gray-900 px-8 py-4 text-lg">
                 Begin 1st Year Guide
               </Button>
             </Link>
