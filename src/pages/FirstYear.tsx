@@ -1,7 +1,9 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ExternalLink } from "lucide-react";
 import { useEffect } from "react";
 
 const FirstYear = () => {
@@ -54,7 +56,7 @@ const FirstYear = () => {
     {
       category: "Data Structures & Algorithms",
       items: [
-        { name: "Love Babbar DSA Sheet", url: "https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCi?usp=sharing" },
+        { name: "Love Babbar DSA Sheet", url: "https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiOGo0YTH-mFm/view?usp=sharing" },
         { name: "Striver's A2Z DSA Course", url: "https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/" },
         { name: "Introduction to Algorithms (CLRS)", url: "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/" },
         { name: "LeetCode Easy Problems", url: "https://leetcode.com/problemset/all/?difficulty=EASY" }
@@ -68,6 +70,33 @@ const FirstYear = () => {
         { name: "VS Code Tips and Tricks", url: "https://www.youtube.com/watch?v=ifTF3ags0XI" },
         { name: "Command Line Basics by FreeCodeCamp", url: "https://www.youtube.com/watch?v=yz7nYlnXLfE" }
       ]
+    }
+  ];
+
+  const youtubeChannels = [
+    {
+      name: "CodeHelp - by Babbar",
+      description: "Complete DSA & Programming courses",
+      url: "https://www.youtube.com/@CodeHelp",
+      subscribers: "500K+"
+    },
+    {
+      name: "Apna College",
+      description: "Programming fundamentals & placement prep",
+      url: "https://www.youtube.com/@ApnaCollegeOfficial",
+      subscribers: "3.5M+"
+    },
+    {
+      name: "Programming with Mosh",
+      description: "Clear programming tutorials",
+      url: "https://www.youtube.com/@programmingwithmosh",
+      subscribers: "3M+"
+    },
+    {
+      name: "FreeCodeCamp",
+      description: "Free comprehensive programming courses",
+      url: "https://www.youtube.com/@freecodecamp",
+      subscribers: "8M+"
     }
   ];
 
@@ -136,8 +165,34 @@ const FirstYear = () => {
         </div>
       </section>
 
-      {/* Learning Resources */}
+      {/* YouTube Channels */}
       <section className="py-16 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Popular YouTube Channels</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {youtubeChannels.map((channel, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow bg-gray-800/50 border-gray-700">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-semibold text-blue-400 mb-2">{channel.name}</h3>
+                  <p className="text-gray-300 mb-2 text-sm">{channel.description}</p>
+                  <p className="text-green-400 text-sm mb-3">{channel.subscribers}</p>
+                  <a 
+                    href={channel.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sm text-blue-400 hover:underline flex items-center justify-center gap-1"
+                  >
+                    Visit Channel <ExternalLink className="w-3 h-3" />
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Learning Resources */}
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Learning Resources</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -155,9 +210,9 @@ const FirstYear = () => {
                           href={item.url} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="text-gray-300 hover:text-blue-400 transition-colors"
+                          className="text-gray-300 hover:text-blue-400 transition-colors flex items-center gap-1"
                         >
-                          {item.name}
+                          {item.name} <ExternalLink className="w-3 h-3" />
                         </a>
                       </li>
                     ))}
@@ -170,7 +225,7 @@ const FirstYear = () => {
       </section>
 
       {/* Practice Platforms */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Recommended Practice Platforms</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -183,9 +238,9 @@ const FirstYear = () => {
                     href={platform.url} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-sm text-blue-400 hover:underline"
+                    className="text-sm text-blue-400 hover:underline flex items-center justify-center gap-1"
                   >
-                    Visit Platform →
+                    Visit Platform <ExternalLink className="w-3 h-3" />
                   </a>
                 </CardContent>
               </Card>
@@ -195,7 +250,7 @@ const FirstYear = () => {
       </section>
 
       {/* Sample Projects */}
-      <section className="py-16 bg-gray-800/30">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Projects to Build</h2>
           <div className="max-w-4xl mx-auto">
@@ -222,7 +277,7 @@ const FirstYear = () => {
       </section>
 
       {/* What NOT to Miss */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">What NOT to Miss in 1st Year</h2>
           <div className="max-w-4xl mx-auto">

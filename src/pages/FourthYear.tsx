@@ -1,3 +1,4 @@
+
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -34,6 +35,33 @@ const FourthYear = () => {
       description: "Pursue research opportunities and PhD applications",
       timeline: "July - January",
       activities: ["Research papers", "Conference submissions", "PhD applications", "Research proposals"]
+    }
+  ];
+
+  const youtubeChannels = [
+    {
+      name: "Gaurav Sen",
+      description: "System Design & Interview Prep",
+      url: "https://www.youtube.com/@gkcs",
+      subscribers: "450K+"
+    },
+    {
+      name: "Tech Dummies",
+      description: "Placement & Career Guidance",
+      url: "https://www.youtube.com/@TechDummiesNarendraL",
+      subscribers: "400K+"
+    },
+    {
+      name: "Rachit Jain",
+      description: "Competitive Programming & Placements",
+      url: "https://www.youtube.com/@RachitJain",
+      subscribers: "200K+"
+    },
+    {
+      name: "Sandeep Jain",
+      description: "GeeksforGeeks Founder - Interview Tips",
+      url: "https://www.youtube.com/@sandeepjainofficial",
+      subscribers: "150K+"
     }
   ];
 
@@ -94,6 +122,59 @@ const FourthYear = () => {
     }
   ];
 
+  const resources = [
+    {
+      category: "Interview Preparation",
+      items: [
+        { name: "Cracking the Coding Interview", url: "https://www.crackingthecodinginterview.com/" },
+        { name: "Elements of Programming Interviews", url: "https://elementsofprogramminginterviews.com/" },
+        { name: "System Design Interview Vol 1 & 2", url: "https://www.amazon.com/System-Design-Interview-insiders-Second/dp/B08CMF2CQF" },
+        { name: "Behavioral Interview Guide", url: "https://www.themuse.com/advice/behavioral-interview-questions-answers-examples" }
+      ]
+    },
+    {
+      category: "Practice Platforms",
+      items: [
+        { name: "LeetCode Premium", url: "https://leetcode.com/premium/" },
+        { name: "InterviewBit", url: "https://www.interviewbit.com/" },
+        { name: "Pramp Mock Interviews", url: "https://www.pramp.com/" },
+        { name: "AlgoExpert", url: "https://www.algoexpert.io/" }
+      ]
+    },
+    {
+      category: "Higher Studies",
+      items: [
+        { name: "GRE Preparation - Magoosh", url: "https://gre.magoosh.com/" },
+        { name: "TOEFL/IELTS Prep", url: "https://www.ets.org/toefl" },
+        { name: "University Rankings", url: "https://www.topuniversities.com/" },
+        { name: "Scholarship Opportunities", url: "https://www.scholars4dev.com/" }
+      ]
+    }
+  ];
+
+  const monthlyPlan = [
+    {
+      month: "July - August",
+      focus: "Foundation Building",
+      tasks: ["Complete DSA revision", "Build/update portfolio", "Research target companies", "Start resume building"]
+    },
+    {
+      month: "September - October", 
+      focus: "Intensive Preparation",
+      tasks: ["Daily LeetCode problems", "System design practice", "Mock interviews", "Company applications"]
+    },
+    {
+      month: "November - December",
+      focus: "Peak Season",
+      tasks: ["Campus placements", "Off-campus applications", "Interview practice", "Negotiate offers"]
+    },
+    {
+      month: "January - February",
+      focus: "Final Push",
+      tasks: ["Last-minute opportunities", "Skill improvement", "Project completion", "Career planning"]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
       <Navigation />
@@ -147,8 +228,95 @@ const FourthYear = () => {
         </div>
       </section>
 
-      {/* Placement Preparation */}
+      {/* YouTube Channels */}
       <section className="py-16 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Placement Focused YouTube Channels</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {youtubeChannels.map((channel, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow bg-gray-800/50 border-gray-700">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-semibold text-blue-400 mb-2">{channel.name}</h3>
+                  <p className="text-gray-300 mb-2 text-sm">{channel.description}</p>
+                  <p className="text-green-400 text-sm mb-3">{channel.subscribers}</p>
+                  <a 
+                    href={channel.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-sm text-blue-400 hover:underline flex items-center justify-center gap-1"
+                  >
+                    Visit Channel <ExternalLink className="w-3 h-3" />
+                  </a>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Monthly Preparation Plan */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Month-wise Preparation Plan</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {monthlyPlan.map((plan, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-gray-800/50 border-gray-700">
+                <CardHeader>
+                  <CardTitle className="text-xl text-blue-400">{plan.month}</CardTitle>
+                  <p className="text-orange-400 font-semibold">{plan.focus}</p>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-2">
+                    {plan.tasks.map((task, i) => (
+                      <li key={i} className="flex items-start text-gray-300">
+                        <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                        {task}
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Placement Preparation Resources */}
+      <section className="py-16 bg-gray-800/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-white mb-12">Essential Resources</h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {resources.map((category, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow bg-gray-800/50 border-gray-700">
+                <CardHeader>
+                  <CardTitle className="text-xl text-blue-400">{category.category}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ul className="space-y-3">
+                    {category.items.map((item, i) => (
+                      <li key={i} className="flex items-start text-gray-300">
+                        <span className="w-2 h-2 bg-green-400 rounded-full mr-3 mt-2"></span>
+                        <a 
+                          href={item.url} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="hover:text-blue-400 transition-colors flex items-center gap-1"
+                        >
+                          {item.name}
+                          <ExternalLink className="w-3 h-3" />
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Placement Preparation Checklist */}
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Placement Preparation Checklist</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -182,7 +350,7 @@ const FourthYear = () => {
       </section>
 
       {/* Company Tiers */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Company Tiers & Expectations</h2>
           <div className="space-y-6">
