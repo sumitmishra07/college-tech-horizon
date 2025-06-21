@@ -17,8 +17,13 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-blue-400">
-            TechRoadmap
+          <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-blue-400 hover:text-blue-300 transition-colors">
+            <img 
+              src="https://i.postimg.cc/Cxp3sJ2W/logo.png" 
+              alt="TechRoadmap Logo" 
+              className="h-8 w-8"
+            />
+            <span>TechRoadmap</span>
           </Link>
 
           {/* Desktop Navigation */}
