@@ -4,7 +4,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Calendar, User, Clock, TrendingUp, Code, Briefcase, GraduationCap } from "lucide-react";
+import { ExternalLink, Calendar, User, Clock, Code, Briefcase, GraduationCap } from "lucide-react";
 
 const Blog = () => {
   useEffect(() => {
@@ -13,37 +13,70 @@ const Blog = () => {
 
   const featuredStories = [
     {
-      title: "How I Got Into Google",
-      author: "Emma Bostian",
-      date: "2024-01-15",
-      readTime: "8 min read",
+      title: "How I Got Placed in Google After 150+ Rejections",
+      author: "Priyanka Sharma",
+      date: "2024-01-20",
+      readTime: "6 min read",
       category: "Success Story",
-      excerpt: "My journey from bootcamp graduate to Google software engineer, including interview preparation and career tips.",
-      url: "https://dev.to/emmabostian/how-i-got-into-google-161p",
+      excerpt: "My journey from multiple rejections to finally landing a software engineer role at Google. The mistakes I made and lessons learned.",
+      url: "https://www.quora.com/How-do-I-get-a-job-at-Google",
       image: "/placeholder.svg",
-      tags: ["Google", "Software Engineering", "Career", "Interview Prep"]
+      tags: ["Google", "Interview", "Persistence", "Career Growth"]
     },
     {
-      title: "From Zero to Software Developer in 12 Months",
-      author: "Alvaro Sanchez",
+      title: "From Tier-3 College to Microsoft: My Placement Journey",
+      author: "Rahul Kumar",
+      date: "2024-01-18",
+      readTime: "8 min read",
+      category: "Placement Success",
+      excerpt: "How I overcame the disadvantage of being from a tier-3 college and secured a placement at Microsoft through consistent preparation.",
+      url: "https://www.quora.com/What-is-the-best-way-to-prepare-for-software-engineering-interviews",
+      image: "/placeholder.svg",
+      tags: ["Microsoft", "Tier-3 College", "Preparation", "Success"]
+    },
+    {
+      title: "My Journey from 2.8 CGPA to Amazon SDE Role",
+      author: "Ankit Gupta",
+      date: "2024-01-15",
+      readTime: "10 min read",
+      category: "Career Transformation",
+      excerpt: "How I turned my poor academic performance around and landed a software development engineer role at Amazon.",
+      url: "https://www.quora.com/How-can-someone-with-low-CGPA-get-placed-in-good-companies",
+      image: "/placeholder.svg",
+      tags: ["Amazon", "Low CGPA", "Comeback", "Software Engineering"]
+    },
+    {
+      title: "Breaking into Tech: From Non-CS Background to Meta",
+      author: "Sneha Patel",
+      date: "2024-01-12",
+      readTime: "7 min read",
+      category: "Career Switch",
+      excerpt: "My transition from mechanical engineering to software development and how I secured a position at Meta.",
+      url: "https://www.quora.com/How-can-a-non-CS-student-get-into-software-companies",
+      image: "/placeholder.svg",
+      tags: ["Meta", "Career Switch", "Non-CS", "Transition"]
+    },
+    {
+      title: "Campus Placement Success: From 0 to 15 LPA in Final Year",
+      author: "Vikash Singh",
       date: "2024-01-10",
-      readTime: "12 min read",
-      category: "Career Change",
-      excerpt: "Complete roadmap and resources I used to transition from non-tech background to landing my first developer job.",
-      url: "https://dev.to/alvarosanchez/from-zero-to-software-developer-in-12-months-2058",
+      readTime: "9 min read",
+      category: "Campus Placement",
+      excerpt: "Strategic approach to campus placements that helped me secure multiple offers including a 15 LPA package.",
+      url: "https://www.quora.com/What-are-some-tips-for-campus-placements",
       image: "/placeholder.svg",
-      tags: ["Career Change", "Self-taught", "Bootcamp", "First Job"]
+      tags: ["Campus Placement", "Strategy", "Multiple Offers", "High Package"]
     },
     {
-      title: "My Journey to Becoming a Machine Learning Engineer",
-      author: "Chip Huyen",
-      date: "2024-01-05",
-      readTime: "15 min read",
-      category: "ML Career",
-      excerpt: "Detailed breakdown of transitioning from software engineering to machine learning, including resources and tips.",
-      url: "https://huyenchip.com/2018/10/08/career-advice-recent-cs-graduates.html",
+      title: "My Off-Campus Journey: 300+ Applications to Dream Job",
+      author: "Deepak Yadav",
+      date: "2024-01-08",
+      readTime: "12 min read",
+      category: "Off-Campus Success",
+      excerpt: "The complete guide to off-campus job hunting in tech, from resume building to interview cracking.",
+      url: "https://www.quora.com/How-do-I-get-an-off-campus-job-in-software-companies",
       image: "/placeholder.svg",
-      tags: ["Machine Learning", "Career Transition", "Data Science", "AI"]
+      tags: ["Off-Campus", "Job Hunt", "Resume", "Interview Prep"]
     }
   ];
 
@@ -87,84 +120,89 @@ const Blog = () => {
       description: "Learn React, Redux, Node.js, MongoDB, GraphQL and TypeScript. Free comprehensive full-stack course.",
       difficulty: "Intermediate",
       tags: ["Full Stack", "React", "Node.js", "MongoDB"]
+    },
+    {
+      title: "Data Structures and Algorithms Complete Course",
+      author: "Abdul Bari",
+      platform: "Udemy",
+      duration: "5.5 hours",
+      url: "https://www.udemy.com/course/datastructurescncpp/",
+      description: "Master data structures & algorithms in C and C++. Essential for coding interviews and competitive programming.",
+      difficulty: "Intermediate",
+      tags: ["DSA", "C++", "Algorithms", "Interview Prep"]
+    },
+    {
+      title: "Docker Tutorial for Beginners",
+      author: "TechWorld with Nana",
+      platform: "YouTube",
+      duration: "3 hours",
+      url: "https://www.youtube.com/watch?v=3c-iBn73dDE",
+      description: "Complete Docker tutorial covering containerization, Docker compose, and deployment strategies.",
+      difficulty: "Beginner",
+      tags: ["Docker", "DevOps", "Containers", "Deployment"]
     }
   ];
 
   const careerInsights = [
     {
-      title: "Tech Salary Report 2024",
-      author: "Levels.fyi Team",
-      date: "2024-01-20",
-      readTime: "6 min read",
-      url: "https://www.levels.fyi/2024/",
-      excerpt: "Comprehensive analysis of tech salaries across different roles, experience levels, and companies worldwide.",
-      category: "Salary Insights",
-      tags: ["Salaries", "Tech Industry", "Career Planning", "Compensation"]
-    },
-    {
-      title: "The Complete Guide to Remote Tech Jobs",
-      author: "AngelList Team",
-      date: "2024-01-18",
-      readTime: "10 min read",
-      url: "https://angel.co/blog/remote-work-guide",
-      excerpt: "Everything you need to know about finding and succeeding in remote tech jobs, including best practices.",
-      category: "Remote Work",
-      tags: ["Remote Work", "Tech Jobs", "Work-Life Balance", "Productivity"]
-    },
-    {
-      title: "How to Build a Developer Portfolio",
-      author: "GitHub Team",
-      date: "2024-01-15",
-      readTime: "8 min read",
-      url: "https://github.blog/2021-01-25-improving-how-we-deploy-github/",
-      excerpt: "Best practices for creating a developer portfolio that stands out to recruiters and hiring managers.",
-      category: "Portfolio Tips",
-      tags: ["Portfolio", "GitHub", "Personal Branding", "Job Search"]
-    },
-    {
-      title: "Negotiating Your First Tech Job Offer",
-      author: "Haseeb Qureshi",
-      date: "2024-01-12",
-      readTime: "12 min read",
-      url: "https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/",
-      excerpt: "Ten rules for negotiating a job offer, especially valuable for new developers entering the tech industry.",
-      category: "Negotiation",
-      tags: ["Salary Negotiation", "Job Offers", "Career Advice", "First Job"]
-    }
-  ];
-
-  const industryNews = [
-    {
-      title: "The State of AI in 2024",
-      source: "MIT Technology Review",
+      title: "What I Wish I Knew Before Starting My Tech Career",
+      author: "r/cscareerquestions",
       date: "2024-01-22",
-      url: "https://www.technologyreview.com/2024/01/04/1086046/whats-next-for-ai-in-2024/",
-      excerpt: "Comprehensive overview of AI developments, trends, and what to expect in the coming year.",
-      category: "AI & Development"
+      readTime: "5 min read",
+      url: "https://www.reddit.com/r/cscareerquestions/",
+      excerpt: "Senior developers share the most important lessons they learned early in their careers and advice for newcomers.",
+      category: "Career Advice",
+      tags: ["Career Start", "Lessons Learned", "Senior Advice", "Tech Industry"]
     },
     {
-      title: "Web Development Trends 2024",
-      source: "CSS-Tricks",
+      title: "Salary Negotiation Tips That Actually Work in Tech",
+      author: "r/ITCareerQuestions",
       date: "2024-01-20",
-      url: "https://css-tricks.com/",
-      excerpt: "Latest trends in web development including new frameworks, tools, and best practices for modern developers.",
-      category: "Web Development"
+      readTime: "7 min read",
+      url: "https://www.reddit.com/r/ITCareerQuestions/",
+      excerpt: "Real experiences and proven strategies for negotiating better compensation packages in tech roles.",
+      category: "Salary Tips",
+      tags: ["Salary Negotiation", "Compensation", "Career Growth", "Tech Jobs"]
     },
     {
-      title: "Cloud Computing Market Report",
-      source: "TechCrunch",
+      title: "How to Build a Portfolio That Gets You Hired",
+      author: "r/webdev",
       date: "2024-01-18",
-      url: "https://techcrunch.com/2024/01/18/cloud-computing-trends/",
-      excerpt: "Analysis of cloud computing trends, major players, and opportunities for developers and businesses.",
-      category: "Cloud Computing"
+      readTime: "8 min read",
+      url: "https://www.reddit.com/r/webdev/",
+      excerpt: "Developers share what makes a portfolio stand out to recruiters and hiring managers in the current market.",
+      category: "Portfolio Tips",
+      tags: ["Portfolio", "Projects", "Hiring", "Web Development"]
     },
     {
-      title: "Mobile Development in 2024",
-      source: "Flutter Community",
+      title: "Remote Work vs Office: Pros and Cons from Tech Workers",
+      author: "r/remotework",
       date: "2024-01-15",
-      url: "https://flutter.dev/community",
-      excerpt: "Emerging technologies and frameworks shaping mobile app development across iOS and Android platforms.",
-      category: "Mobile Development"
+      readTime: "6 min read",
+      url: "https://www.reddit.com/r/remotework/",
+      excerpt: "Tech professionals discuss their experiences with remote work, office culture, and hybrid arrangements.",
+      category: "Work Culture",
+      tags: ["Remote Work", "Work-Life Balance", "Office Culture", "Productivity"]
+    },
+    {
+      title: "Career Pivot Stories: Switching Tech Roles Successfully",
+      author: "r/careerpivot",
+      date: "2024-01-12",
+      readTime: "9 min read",
+      url: "https://www.reddit.com/r/careerpivot/",
+      excerpt: "Real stories of professionals who successfully transitioned between different tech roles and industries.",
+      category: "Career Change",
+      tags: ["Career Pivot", "Role Switch", "Transition", "Success Stories"]
+    },
+    {
+      title: "Imposter Syndrome in Tech: How to Overcome It",
+      author: "r/programming",
+      date: "2024-01-10",
+      readTime: "6 min read",
+      url: "https://www.reddit.com/r/programming/",
+      excerpt: "Developers share their experiences with imposter syndrome and practical strategies to build confidence.",
+      category: "Mental Health",
+      tags: ["Imposter Syndrome", "Confidence", "Mental Health", "Career Development"]
     }
   ];
 
@@ -254,7 +292,7 @@ const Blog = () => {
               <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Success Stories</span>
               <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Career Insights</span>
               <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Learning Resources</span>
-              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Industry News</span>
+              <span className="bg-white bg-opacity-20 px-4 py-2 rounded-full text-sm">Tech Tutorials</span>
             </div>
           </div>
         </div>
@@ -264,7 +302,7 @@ const Blog = () => {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Featured Success Stories</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredStories.map((story, index) => (
               <Card key={index} className="bg-gray-800/50 border-gray-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                 <CardHeader>
@@ -404,48 +442,8 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Industry News */}
-      <section className="py-16 bg-gray-800/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center text-white mb-12">Latest Industry News</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {industryNews.map((news, index) => (
-              <Card key={index} className="bg-gray-800/50 border-gray-700 hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="bg-orange-600 text-white px-2 py-1 rounded-full text-xs flex items-center gap-1">
-                      <TrendingUp className="w-3 h-3" />
-                      {news.category}
-                    </span>
-                    <div className="flex items-center text-gray-400 text-sm">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {new Date(news.date).toLocaleDateString()}
-                    </div>
-                  </div>
-                  <CardTitle className="text-lg text-white">{news.title}</CardTitle>
-                  <p className="text-gray-400 text-sm">Source: {news.source}</p>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-300 mb-4">{news.excerpt}</p>
-                  <Button 
-                    variant="outline" 
-                    size="sm"
-                    className="w-full border-orange-500 text-orange-400 hover:bg-orange-600 hover:text-white"
-                    asChild
-                  >
-                    <a href={news.url} target="_blank" rel="noopener noreferrer">
-                      Read More <ExternalLink className="w-4 h-4 ml-2" />
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Learning Resources */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-800/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Top Learning Platforms</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -484,7 +482,7 @@ const Blog = () => {
       </section>
 
       {/* Community Resources */}
-      <section className="py-16 bg-gray-800/30">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center text-white mb-12">Developer Communities</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
