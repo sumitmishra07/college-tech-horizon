@@ -9,7 +9,6 @@ const Navigation = () => {
   const navItems = [
     { name: "Domains", path: "/domains" },
     { name: "Resources", path: "/resources" },
-    { name: "Blog", path: "/blog" },
   ];
 
   const handleLogoClick = () => {

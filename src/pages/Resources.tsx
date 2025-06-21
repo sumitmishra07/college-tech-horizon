@@ -188,6 +188,32 @@ const Resources = () => {
         { name: "Responsive Design", url: "https://www.youtube.com/playlist?list=PL4-IK0AVhVjODqX-aXRD0RmAL3lFNbMR8" }
       ],
       icon: <Youtube className="w-6 h-6" />
+    },
+    {
+      name: "take U forward (Striver)",
+      description: "DSA, competitive programming and placement preparation",
+      url: "https://www.youtube.com/@takeUforward",
+      subscribers: "680K",
+      category: "DSA & Placement",
+      playlists: [
+        { name: "Striver's A2Z DSA Course", url: "https://www.youtube.com/playlist?list=PLgUwDviBIf0rENwdL0nEH0uGom9no0nyB" },
+        { name: "SDE Sheet Problems", url: "https://www.youtube.com/playlist?list=PLgUwDviBIf0rPG3Ictpu74YWBQ1CaBkm2" },
+        { name: "Dynamic Programming Series", url: "https://www.youtube.com/playlist?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY" }
+      ],
+      icon: <Youtube className="w-6 h-6" />
+    },
+    {
+      name: "CodeHelp - by Babbar",
+      description: "Complete DSA course and programming tutorials by Love Babbar",
+      url: "https://www.youtube.com/@CodeHelp",
+      subscribers: "1.2M",
+      category: "DSA & Programming",
+      playlists: [
+        { name: "DSA Supreme Course", url: "https://www.youtube.com/playlist?list=PLDzeHZWIZsTqBmRGnsCOGNDG5FQwKzuJ_" },
+        { name: "C++ Complete Course", url: "https://www.youtube.com/playlist?list=PLDzeHZWIZsTobi35C3I-tKB3tRDX6YxuA" },
+        { name: "System Design", url: "https://www.youtube.com/playlist?list=PLDzeHZWIZsTpukecmA2p5rhHM14bl2qt_" }
+      ],
+      icon: <Youtube className="w-6 h-6" />
     }
   ];
 
@@ -550,9 +576,6 @@ const Resources = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-4 text-lg" asChild>
               <a href="/domains">Explore Domains</a>
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 text-lg" asChild>
-              <a href="/blog">Read Success Stories</a>
             </Button>
           </div>
         </div>
