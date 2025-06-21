@@ -12,12 +12,20 @@ const Navigation = () => {
     { name: "Blog", path: "/blog" },
   ];
 
+  const handleLogoClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <nav className="bg-gray-900/95 backdrop-blur-sm shadow-sm border-b border-gray-700 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2 text-2xl font-bold text-blue-400 hover:text-blue-300 transition-colors">
+          <Link 
+            to="/" 
+            onClick={handleLogoClick}
+            className="flex items-center space-x-2 text-2xl font-bold text-blue-400 hover:text-blue-300 transition-colors"
+          >
             <img 
               src="https://i.postimg.cc/Cxp3sJ2W/logo.png" 
               alt="TechRoadmap Logo" 
