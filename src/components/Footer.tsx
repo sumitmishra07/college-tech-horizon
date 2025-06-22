@@ -2,7 +2,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ExternalLink, Mail, Github, Linkedin, Twitter } from "lucide-react";
+import { ExternalLink, Mail, X, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -18,12 +18,12 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a 
-                href="https://github.com" 
+                href="https://x.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
               >
-                <Github className="w-6 h-6" />
+                <X className="w-6 h-6" />
               </a>
               <a 
                 href="https://linkedin.com" 
@@ -76,11 +76,11 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <div className="space-y-2">
               <a 
-                href="mailto:contact@techroadmap.com" 
+                href="mailto:techroadmap7@gmail.com" 
                 className="text-gray-400 hover:text-white transition-colors flex items-center"
               >
                 <Mail className="w-4 h-4 mr-2" />
-                contact@techroadmap.com
+                techroadmap7@gmail.com
               </a>
               <p className="text-gray-400">
                 Building the future of tech education
