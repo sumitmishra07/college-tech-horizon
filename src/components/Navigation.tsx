@@ -28,7 +28,7 @@ const Navigation = () => {
             <img 
               src="https://i.postimg.cc/1t3q666L/logooo.png" 
               alt="TechRoadmap Logo" 
-              className="h-8 w-8"
+              className="h-12 w-12"
             />
             <span>TechRoadmap</span>
           </Link>
