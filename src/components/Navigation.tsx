@@ -26,7 +26,7 @@ const Navigation = () => {
             className="flex items-center space-x-2 text-2xl font-bold text-blue-400 hover:text-blue-300 transition-colors"
           >
             <img 
-              src="https://i.postimg.cc/Cxp3sJ2W/logo.png" 
+              src="https://i.postimg.cc/1t3q666L/logooo.png" 
               alt="TechRoadmap Logo" 
               className="h-8 w-8"
             />
