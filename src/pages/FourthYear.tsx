@@ -387,12 +387,9 @@ const FourthYear = () => {
           <p className="text-xl mb-8 text-blue-100">
             You've come so far! Now it's time to showcase your skills and land that perfect opportunity.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button size="lg" variant="outline" className="border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-gray-900 px-8 py-4 text-lg" asChild>
               <a href="/resources">Browse Resources</a>
-            </Button>
-            <Button size="lg" variant="outline" className="border-blue-300 text-blue-300 hover:bg-blue-300 hover:text-gray-900 px-8 py-4 text-lg" asChild>
-              <a href="/blog">Read Blog Posts</a>
             </Button>
           </div>
         </div>
