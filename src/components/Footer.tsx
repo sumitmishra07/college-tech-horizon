@@ -91,7 +91,16 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 TechRoadmap. All rights reserved. Built with ❤️ for aspiring developers.
+            © 2024 TechRoadmap. All rights reserved. Built with ❤️ by{" "}
+            <a 
+              href="https://www.linkedin.com/in/sumit-mishra77?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 transition-colors"
+            >
+              Sumit Mishra
+            </a>
+            {" "}for aspiring developers.
           </p>
         </div>
       </div>
